@@ -73,13 +73,13 @@ std::vector<Combination> GenerateAllCombinations() {
   // const std::array kNumbersOfSimd = {1, 10};
 
   const std::array kDPMechanismType = {
-      // T::kDiscreteLaplaceMechanismCKS_FL32DiscreteLaplace_noise_generation_naive,
-      // T::kDiscreteLaplaceMechanismCKS_FL32DiscreteLaplace_noise_generation_optimized,
-      // T::kDiscreteLaplaceMechanismCKS_FL32DiscreteLaplace_perturbation,
+      T::kDiscreteLaplaceMechanismCKS_FL32DiscreteLaplace_noise_generation_naive,
+      T::kDiscreteLaplaceMechanismCKS_FL32DiscreteLaplace_noise_generation_optimized,
+      T::kDiscreteLaplaceMechanismCKS_FL32DiscreteLaplace_perturbation,
 
-      // T::kDiscreteLaplaceMechanismCKS_FL64DiscreteLaplace_noise_generation_naive,
+      T::kDiscreteLaplaceMechanismCKS_FL64DiscreteLaplace_noise_generation_naive,
       T::kDiscreteLaplaceMechanismCKS_FL64DiscreteLaplace_noise_generation_optimized,
-      // T::kDiscreteLaplaceMechanismCKS_FL64DiscreteLaplace_perturbation,
+      T::kDiscreteLaplaceMechanismCKS_FL64DiscreteLaplace_perturbation,
   };
 
   std::vector<Combination> combinations;
