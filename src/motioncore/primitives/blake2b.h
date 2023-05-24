@@ -29,6 +29,9 @@
 
 #include <openssl/evp.h>
 
+// added by Liang Zhao
+#include <cstdint>
+
 namespace encrypto::motion {
 
 using Blake2bCtx = std::unique_ptr<EVP_MD_CTX, std::function<void(EVP_MD_CTX*)>>;
