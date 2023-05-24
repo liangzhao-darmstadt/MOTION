@@ -73,13 +73,13 @@ std::vector<Combination> GenerateAllCombinations() {
   // const std::array kNumbersOfSimd = {1, 10};
 
   const std::array kDPMechanismType = {
-      T::kDiscreteLaplaceMechanismCKS_FL32DiscreteLaplace_noise_generation_naive,
-      T::kDiscreteLaplaceMechanismCKS_FL32DiscreteLaplace_noise_generation_optimized,
-      T::kDiscreteLaplaceMechanismCKS_FL32DiscreteLaplace_perturbation,
+      // T::kDiscreteLaplaceMechanismCKS_FL32DiscreteLaplace_noise_generation_naive,
+      // T::kDiscreteLaplaceMechanismCKS_FL32DiscreteLaplace_noise_generation_optimized,
+      // T::kDiscreteLaplaceMechanismCKS_FL32DiscreteLaplace_perturbation,
 
-      T::kDiscreteLaplaceMechanismCKS_FL64DiscreteLaplace_noise_generation_naive,
+      // T::kDiscreteLaplaceMechanismCKS_FL64DiscreteLaplace_noise_generation_naive,
       T::kDiscreteLaplaceMechanismCKS_FL64DiscreteLaplace_noise_generation_optimized,
-      T::kDiscreteLaplaceMechanismCKS_FL64DiscreteLaplace_perturbation,
+      // T::kDiscreteLaplaceMechanismCKS_FL64DiscreteLaplace_perturbation,
   };
 
   std::vector<Combination> combinations;
@@ -88,11 +88,11 @@ std::vector<Combination> GenerateAllCombinations() {
 
   std::size_t batch_size = 1;
 
-  std::size_t num_of_parties = 3;
-  // bool benchmark_gc = true;
-  bool benchmark_gc = false;
-  bool benchmark_boolean_gmw = true;
-  // bool benchmark_boolean_gmw = false;
+  std::size_t num_of_parties = 2;
+  bool benchmark_gc = true;
+  // bool benchmark_gc = false;
+  // bool benchmark_boolean_gmw = true;
+  bool benchmark_boolean_gmw = false;
 
   if (benchmark_gc && num_of_parties == 2) {
     // ================================================
