@@ -66,6 +66,7 @@ add_library(motion
         # added by Liang Zhao
         secure_type/secure_fixed_point_circuit_CBMC.cpp
         secure_type/secure_floating_point_circuit_ABY.cpp
+
         # secure_type/secure_floating_point32_agmw_ABZS.cpp
         # secure_type/secure_floating_point64_agmw_ABZS.cpp
         secure_type/secure_fixed_point_64_agmw_CS.cpp
@@ -157,7 +158,7 @@ target_compile_features(motion PUBLIC cxx_std_20)
 target_compile_options(motion PRIVATE
         ${MOTION_EXTRA_FLAGS}
         -Wall -Wextra
-        -pedantic -ansi
+        -pedantic
         -maes -msse2 -msse4.1 -msse4.2 -mpclmul
         -ffunction-sections -march=native -ffast-math
         ${MOTION_VECT_COST_MODEL_GCC_FLAG}

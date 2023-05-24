@@ -8,6 +8,7 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 20 --slave /
 # install MOTION
 git clone https://github.com/encryptogroup/MOTION.git
 cd MOTION/
+git checkout dev
 mkdir build && cd build
 cmake ..
 make
