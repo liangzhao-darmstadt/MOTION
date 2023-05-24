@@ -28,6 +28,9 @@
 #include <span>
 #include <vector>
 
+// added by Liang Zhao
+#include <cstdint>
+
 namespace encrypto::motion::communication {
 
 struct TransportStatistics {
