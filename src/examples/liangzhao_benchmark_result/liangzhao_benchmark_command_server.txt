@@ -68,6 +68,15 @@ When you are done running the experiments, you can remove your name from the spr
 
 cd ~/MOTION/build/bin/
 
+============================================================
+
+./benchmark_liangzhao_discrete_laplace_mechanism_CKS --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000
+
+./benchmark_liangzhao_discrete_laplace_mechanism_CKS --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000
+
+============================================================
+
+
 
 ===============================
 
@@ -100,10 +109,3 @@ TCP
 
     Use command `sudo netstat -c -lat` to check if ports are successfully released (ports should be released after 60s in Ubuntu, not in state TIME_WAIT or CLOSE_WAIT).
 
-============================================================
-
-./benchmark_liangzhao_discrete_laplace_mechanism_CKS --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000
-
-./benchmark_liangzhao_discrete_laplace_mechanism_CKS --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000
-
-============================================================
