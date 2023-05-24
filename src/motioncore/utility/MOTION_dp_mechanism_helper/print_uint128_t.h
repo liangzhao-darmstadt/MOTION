@@ -6,6 +6,9 @@
 #include <stdio.h>
 #include <iostream>
 
+// added by Liang Zhao
+#include <cstdint>
+
 /*
 ** Using documented GCC type unsigned __int128 instead of undocumented
 ** obsolescent typedef name __uint128_t.  Works with GCC 4.7.1 but not
