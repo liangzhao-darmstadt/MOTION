@@ -1,6 +1,6 @@
 // MIT License
 //
-// Copyright (c) 2022 Oleksandr Tkachenko
+// Copyright (c) 2021 Oleksandr Tkachenko, Arianne Roselina Prananto
 // Cryptography and Privacy Engineering Group (ENCRYPTO)
 // TU Darmstadt, Germany
 //
@@ -24,93 +24,163 @@
 
 #pragma once
 
-#include "secure_unsigned_integer.h"
-
+#include "protocols/share_wrapper.h"
+#include "secure_type/secure_fixed_point_circuit_CBMC.h"
+#include "secure_type/secure_floating_point_circuit_ABY.h"
 namespace encrypto::motion {
 
-/// \b implements an interface for signed arithmetic on standard C++ data types and 128-bit integers
-/// using the two's complement representation.
+class Logger;
+
+class SecureFixedPointCircuitCBMC;
+class SecureFloatingPointCircuitABY;
+
+// ! 128-bit circuit for div, mod are not optimized because of HyCC
 class SecureSignedInteger {
  public:
   SecureSignedInteger() = default;
-  SecureSignedInteger(SecureUnsignedInteger share) : share_(share) {}
-  SecureSignedInteger(ShareWrapper share) : share_(share) {}
-  SecureSignedInteger(SharePointer share) : share_(share) {}
 
-  virtual ~SecureSignedInteger() = default;
+  SecureSignedInteger(const SecureSignedInteger& other) : SecureSignedInteger(*other.share_) {}
+
+  SecureSignedInteger(SecureSignedInteger&& other) : SecureSignedInteger(std::move(*other.share_)) {
+    other.share_->Get().reset();
+  }
+
+  SecureSignedInteger(const ShareWrapper& other) : SecureSignedInteger(*other) {}
+
+  SecureSignedInteger(ShareWrapper&& other) : SecureSignedInteger(std::move(*other)) {
+    other.Get().reset();
+  }
+
+  SecureSignedInteger(const SharePointer& other);
+
+  SecureSignedInteger(SharePointer&& other);
 
   SecureSignedInteger& operator=(const SecureSignedInteger& other) {
-    share_ = other.share_;
+    this->share_ = other.share_;
+    this->logger_ = other.logger_;
     return *this;
   }
 
   SecureSignedInteger& operator=(SecureSignedInteger&& other) {
-    share_ = std::move(other.share_);
+    this->share_ = std::move(other.share_);
+    this->logger_ = std::move(other.logger_);
     return *this;
   }
 
-  ShareWrapper& Get() { return share_.Get(); }
+  ShareWrapper& Get() { return *share_; }
 
-  const ShareWrapper& Get() const { return share_.Get(); }
+  const ShareWrapper& Get() const { return *share_; }
 
-  ShareWrapper& operator->() { return share_.Get(); }
+  ShareWrapper& operator->() { return *share_; }
 
-  const ShareWrapper& operator->() const { return share_.Get(); }
+  const ShareWrapper& operator->() const { return *share_; }
 
-  SecureSignedInteger operator+(const SecureSignedInteger& other) const {
-    return this->share_ + other.share_;
-  }
+  SecureSignedInteger operator+(const SecureSignedInteger& other) const;
 
   SecureSignedInteger& operator+=(const SecureSignedInteger& other) {
     *this = *this + other;
     return *this;
   }
 
-  SecureSignedInteger operator-(const SecureSignedInteger& other) const {
-    return this->share_ - other.share_;
-  }
+  SecureSignedInteger operator-(const SecureSignedInteger& other) const;
 
   SecureSignedInteger& operator-=(const SecureSignedInteger& other) {
     *this = *this - other;
     return *this;
   }
 
-  SecureSignedInteger operator*(const SecureSignedInteger& other) const {
-    return this->share_ * other.share_;
-  }
+  SecureSignedInteger operator*(const SecureSignedInteger& other) const;
 
   SecureSignedInteger& operator*=(const SecureSignedInteger& other) {
     *this = *this * other;
     return *this;
   }
 
-  SecureSignedInteger operator/(const SecureSignedInteger& other) const {
-    // TODO implement
-    throw std::runtime_error("Not implemented yet");
-    return this->share_ + other.share_;
-  }
+  SecureSignedInteger operator/(const SecureSignedInteger& other) const;
 
   SecureSignedInteger& operator/=(const SecureSignedInteger& other) {
     *this = *this / other;
     return *this;
   }
 
-  ShareWrapper operator>(const SecureSignedInteger& other) const {
-    // TODO implement
-    throw std::runtime_error("Not implemented yet");
-    return this->share_ > other.share_;
-  }
+  ShareWrapper operator<(const SecureSignedInteger& other) const;
 
-  ShareWrapper operator==(const SecureSignedInteger& other) const {
-    return this->share_ == other.share_;
-  }
+  ShareWrapper operator>(const SecureSignedInteger& other) const;
+
+  ShareWrapper operator==(const SecureSignedInteger& other) const;
+
+  /// \brief operations with constant value
+  // TODO: support garbled circuit protocol
+  template <typename T,
+            typename = std::enable_if_t<std::is_unsigned_v<T> || std::is_same_v<T, __uint128_t>>>
+  SecureSignedInteger operator+(const T& constant_value) const;
+
+  template <typename T,
+            typename = std::enable_if_t<std::is_unsigned_v<T> || std::is_same_v<T, __uint128_t>>>
+  SecureSignedInteger operator-(const T& constant_value) const;
+
+  template <typename T,
+            typename = std::enable_if_t<std::is_unsigned_v<T> || std::is_same_v<T, __uint128_t>>>
+  SecureSignedInteger operator*(const T& constant_value) const;
+
+  template <typename T,
+            typename = std::enable_if_t<std::is_unsigned_v<T> || std::is_same_v<T, __uint128_t>>>
+  SecureSignedInteger operator/(const T& constant_value) const;
+
+  template <typename T,
+            typename = std::enable_if_t<std::is_unsigned_v<T> || std::is_same_v<T, __uint128_t>>>
+  ShareWrapper operator<(const T& constant_value) const;
+
+  template <typename T,
+            typename = std::enable_if_t<std::is_unsigned_v<T> || std::is_same_v<T, __uint128_t>>>
+  ShareWrapper operator>(const T& constant_value) const;
+
+  template <typename T,
+            typename = std::enable_if_t<std::is_unsigned_v<T> || std::is_same_v<T, __uint128_t>>>
+  ShareWrapper operator==(const T& constant_value) const;
+
+  // multiplication each Boolean bit of *this with a bit share
+  SecureSignedInteger MulBooleanBit(const ShareWrapper& boolean_gmw_bit_share_other) const;
+
+  /// \brief equals to zero
+  ShareWrapper IsZero() const;
+
+  /// \brief is greater than or equals to
+  ShareWrapper GE(const SecureSignedInteger& other) const;
+
+  /// \brief is less than or equals to
+  ShareWrapper LE(const SecureSignedInteger& other) const;
+
+  // other >=0
+  // -other <= this <= other
+  ShareWrapper InRange(const SecureSignedInteger& other) const;
+
+  ShareWrapper IsNeg() const;
+
+  // convert *this to negative integer according to sign(positive integer if sign = 0, negative
+  // integer otherwise)
+  SecureSignedInteger Neg(const ShareWrapper& boolean_gmw_or_bmr_share_sign) const;
+
+  // convert *this to negative integer
+  SecureSignedInteger Neg() const;
+
+  // convert integer to SecureFloatingPointCircuitESAT
+  SecureFloatingPointCircuitABY Int2FL(std::size_t floating_point_bit_length = 64) const;
+
+  SecureFixedPointCircuitCBMC Int2Fx(std::size_t fraction_bit_size = 16) const;
+
+  // // added by Liang Zhao
+  // // addition of two uint64_t numbers and output an __uint128_t number (without overflow)
+  // ??? not useful
+  // SecureSignedInteger AddUint64OutputUint128(const SecureSignedInteger& other) const;
 
   /// \brief internally extracts the ShareWrapper/SharePointer from input and
   /// calls ShareWrapper::Simdify(std::span<SharePointer> input)
   static SecureSignedInteger Simdify(std::span<SecureSignedInteger> input);
+
   //
   /// \brief internally extracts shares from each entry in input and calls
-  /// Simdify(std::span<SecureUnsignedInteger> input) from the result
+  /// Simdify(std::span<SecureSignedInteger> input) from the result
   static SecureSignedInteger Simdify(std::vector<SecureSignedInteger>&& input);
 
   /// \brief constructs a SubsetGate that returns values stored at positions in this->share_.
@@ -118,7 +188,7 @@ class SecureSignedInteger {
   SecureSignedInteger Subset(std::span<const size_t> positions);
 
   /// \brief constructs a SubsetGate that returns values stored at positions in this->share_.
-  /// Internally calls SecureUnsignedInteger Subset(std::span<std::size_t> positions).
+  /// Internally calls SecureSignedInteger Subset(std::span<std::size_t> positions).
   SecureSignedInteger Subset(std::vector<size_t>&& positions);
 
   /// \brief decomposes this->share_->Get() into shares with exactly 1 SIMD value.
@@ -131,13 +201,21 @@ class SecureSignedInteger {
   SecureSignedInteger Out(
       std::size_t output_owner = std::numeric_limits<std::int64_t>::max()) const;
 
-  /// \brief converts the information on the wires to T in type Signed Integer.
+  /// \brief converts the information on the wires to T in type Unsigned Integer.
   /// See the description in ShareWrapper::As for reference.
   template <typename T>
   T As() const;
 
+  template <typename T, typename A = std::allocator<T>>
+  std::vector<T, A> AsVector() const;
+
  private:
-  SecureUnsignedInteger share_;
+  std::shared_ptr<ShareWrapper> share_{nullptr};
+  std::shared_ptr<Logger> logger_{nullptr};
+
+  std::string ConstructPath(const SignedIntegerOperationType type, const std::size_t bitlength,
+                            std::string suffix = "",
+                            const std::size_t floating_point_bit_length = 64) const;
 };
 
 }  // namespace encrypto::motion

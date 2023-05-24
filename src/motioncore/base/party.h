@@ -38,6 +38,10 @@
 #include "protocols/share.h"
 #include "utility/typedefs.h"
 
+#include "utility/MOTION_dp_mechanism_helper/floating_point_operation.h"
+
+#include "protocols/share_wrapper.h"
+
 namespace encrypto::motion::communication {
 
 class CommunicationLayer;
@@ -164,6 +168,12 @@ class Party {
       case MpcProtocol::kBmr: {
         return backend_->BmrInput(party_id, input);
       }
+
+        // added by Liang Zhao
+      case MpcProtocol::kGarbledCircuit: {
+        return backend_->GarbledCircuitInput(party_id, input);
+      }
+
       default: {
         throw(std::runtime_error(
             fmt::format("Unknown MPC protocol with id {}", static_cast<unsigned int>(P))));
@@ -188,6 +198,9 @@ class Party {
       }
       case MpcProtocol::kBmr: {
         return backend_->BmrInput(party_id, input);
+      }
+      case MpcProtocol::kGarbledCircuit: {
+        return backend_->GarbledCircuitInput(party_id, input);
       }
       default: {
         throw(std::runtime_error(
@@ -276,13 +289,345 @@ class Party {
     }
   }
 
+  // added by Liang Zhao
+  // TODO: change to floatingpointsharestruct
+  // add case for T input
+  template <MpcProtocol P, typename T = __uint128_t>
+  std::vector<SharePointer> InFloatingPoint(
+      const double& input, std::size_t l = 53, std::size_t k = 11,
+      std::size_t party_id = std::numeric_limits<std::size_t>::max()) {
+    switch (P) {
+      case MpcProtocol::kArithmeticConstant: {
+        FloatingPointStruct<T> floating_point_share_struct =
+            FloatingPointDecomposeToStruct<T>(input, l, k);
+
+        std::vector<SharePointer> floating_point_share_pointer_vector;
+        floating_point_share_pointer_vector.reserve(4);
+
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ConstantArithmeticGmwInput<T>(floating_point_share_struct.mantissa));
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ConstantArithmeticGmwInput<T>(floating_point_share_struct.exponent));
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ConstantArithmeticGmwInput<T>(floating_point_share_struct.zero));
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ConstantArithmeticGmwInput<T>(floating_point_share_struct.sign));
+
+        return floating_point_share_pointer_vector;
+      }
+      case MpcProtocol::kArithmeticGmw: {
+        FloatingPointStruct<T> floating_point_share_struct =
+            FloatingPointDecomposeToStruct<T>(input, l, k);
+
+        std::vector<SharePointer> floating_point_share_pointer_vector;
+        floating_point_share_pointer_vector.reserve(4);
+
+        // std::cout<<"floating_point_share_struct.mantissa:
+        // "<<std::int64_t(floating_point_share_struct.mantissa)<<std::endl;
+        // std::cout<<"floating_point_share_struct.exponent:
+        // "<<std::int64_t(floating_point_share_struct.exponent)<<std::endl;
+
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ArithmeticGmwInput<T>(party_id, floating_point_share_struct.mantissa));
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ArithmeticGmwInput<T>(party_id, floating_point_share_struct.exponent));
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ArithmeticGmwInput<T>(party_id, floating_point_share_struct.zero));
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ArithmeticGmwInput<T>(party_id, floating_point_share_struct.sign));
+        // floating_point_share_pointer_vector.emplace_back(
+        //     backend_->ArithmeticGmwInput<T>(party_id, floating_point_share_struct.error));
+
+        // std::cout<<"floating_point_share_struct"<<std::endl;
+
+        return floating_point_share_pointer_vector;
+      }
+      case MpcProtocol::kBooleanGmw: {
+        throw std::runtime_error(
+            "Non-binary types have to be converted to BitVectors in BooleanGMW, "
+            "consider using TODO function for the input");
+      }
+      case MpcProtocol::kBmr: {
+        throw std::runtime_error(
+            "Non-binary types have to be converted to BitVectors in BMR, "
+            "consider using TODO function for the input");
+      }
+      default: {
+        throw(std::runtime_error(
+            fmt::format("Unknown MPC protocol with id {}", static_cast<unsigned int>(P))));
+      }
+    }
+  }
+
+  // add case for T input vector
+  template <MpcProtocol P, typename T = __uint128_t>
+  std::vector<SharePointer> InFloatingPoint(
+      const std::vector<double>& input_vector, std::size_t l = 53, std::size_t k = 11,
+      std::size_t party_id = std::numeric_limits<std::size_t>::max()) {
+    switch (P) {
+      case MpcProtocol::kArithmeticConstant: {
+        FloatingPointVectorStruct<T> floating_point_share_struct =
+            FloatingPointDecomposeToStruct<T>(input_vector, l, k);
+
+        std::vector<SharePointer> floating_point_share_pointer_vector;
+        floating_point_share_pointer_vector.reserve(4);
+
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ConstantArithmeticGmwInput<T>(floating_point_share_struct.mantissa));
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ConstantArithmeticGmwInput<T>(floating_point_share_struct.exponent));
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ConstantArithmeticGmwInput<T>(floating_point_share_struct.zero));
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ConstantArithmeticGmwInput<T>(floating_point_share_struct.sign));
+
+        return floating_point_share_pointer_vector;
+      }
+      case MpcProtocol::kArithmeticGmw: {
+        FloatingPointVectorStruct<T> floating_point_share_struct =
+            FloatingPointDecomposeToStruct<T>(input_vector, l, k);
+
+        std::vector<SharePointer> floating_point_share_pointer_vector;
+        floating_point_share_pointer_vector.reserve(4);
+
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ArithmeticGmwInput<T>(party_id, floating_point_share_struct.mantissa));
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ArithmeticGmwInput<T>(party_id, floating_point_share_struct.exponent));
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ArithmeticGmwInput<T>(party_id, floating_point_share_struct.zero));
+        floating_point_share_pointer_vector.emplace_back(
+            backend_->ArithmeticGmwInput<T>(party_id, floating_point_share_struct.sign));
+        // floating_point_share_pointer_vector.emplace_back(
+        //     backend_->ArithmeticGmwInput<T>(party_id, floating_point_share_struct.error));
+
+        // std::cout<<"floating_point_share_struct"<<std::endl;
+
+        return floating_point_share_pointer_vector;
+      }
+      case MpcProtocol::kBooleanGmw: {
+        throw std::runtime_error(
+            "Non-binary types have to be converted to BitVectors in BooleanGMW, "
+            "consider using TODO function for the input");
+      }
+      case MpcProtocol::kBmr: {
+        throw std::runtime_error(
+            "Non-binary types have to be converted to BitVectors in BMR, "
+            "consider using TODO function for the input");
+      }
+      default: {
+        throw(std::runtime_error(
+            fmt::format("Unknown MPC protocol with id {}", static_cast<unsigned int>(P))));
+      }
+    }
+  }
+
+  template <MpcProtocol P, typename T = __uint128_t>
+  FixedPointShareStruct InFixedPoint(
+      const double& input, std::size_t k = 41, std::size_t f = 20,
+      std::size_t party_id = std::numeric_limits<std::size_t>::max()) {
+    switch (P) {
+      case MpcProtocol::kArithmeticConstant: {
+        FixedPointShareStruct fixed_point_share_struct;
+
+        FixedPointStruct<T> fixed_point_struct = CreateFixedPointStruct<T>(input, k, f);
+
+        ShareWrapper constant_arithmetic_gmw_share_v =
+            backend_->ConstantArithmeticGmwInput<T>(fixed_point_struct.v);
+
+        fixed_point_share_struct.v = constant_arithmetic_gmw_share_v;
+        fixed_point_share_struct.k = k;
+        fixed_point_share_struct.f = f;
+
+        return fixed_point_share_struct;
+      }
+      case MpcProtocol::kArithmeticGmw: {
+        FixedPointStruct<T> fixed_point_struct = CreateFixedPointStruct<T>(input, k, f);
+
+        ShareWrapper fixed_point_share_struct_v =
+            backend_->ArithmeticGmwInput<T>(party_id, fixed_point_struct.v);
+        FixedPointShareStruct fixed_point_share_struct;
+        fixed_point_share_struct.v = fixed_point_share_struct_v;
+        fixed_point_share_struct.k = k;
+        fixed_point_share_struct.f = f;
+
+        return fixed_point_share_struct;
+      }
+      case MpcProtocol::kBooleanGmw: {
+        throw std::runtime_error(
+            "Non-binary types have to be converted to BitVectors in BooleanGMW, "
+            "consider using TODO function for the input");
+      }
+      case MpcProtocol::kBmr: {
+        throw std::runtime_error(
+            "Non-binary types have to be converted to BitVectors in BMR, "
+            "consider using TODO function for the input");
+      }
+      default: {
+        throw(std::runtime_error(
+            fmt::format("Unknown MPC protocol with id {}", static_cast<unsigned int>(P))));
+      }
+    }
+  }
+
+  template <MpcProtocol P, typename T = __uint128_t>
+  FixedPointShareStruct InFixedPoint(
+      const std::vector<double>& input_vector, std::size_t k = 41, std::size_t f = 20,
+      std::size_t party_id = std::numeric_limits<std::size_t>::max()) {
+    switch (P) {
+      case MpcProtocol::kArithmeticConstant: {
+        FixedPointShareStruct fixed_point_share_struct;
+
+        FixedPointVectorStruct<T> fixed_point_struct =
+            CreateFixedPointVectorStruct<T>(input_vector, k, f);
+
+        ShareWrapper constant_arithmetic_gmw_share_v =
+            backend_->ConstantArithmeticGmwInput<T>(fixed_point_struct.v_vector);
+
+        fixed_point_share_struct.v = constant_arithmetic_gmw_share_v;
+        fixed_point_share_struct.k = k;
+        fixed_point_share_struct.f = f;
+
+        return fixed_point_share_struct;
+      }
+      case MpcProtocol::kArithmeticGmw: {
+        FixedPointVectorStruct<T> fixed_point_struct =
+            CreateFixedPointVectorStruct<T>(input_vector, k, f);
+
+        ShareWrapper fixed_point_share_struct_v =
+            backend_->ArithmeticGmwInput<T>(party_id, fixed_point_struct.v_vector);
+        FixedPointShareStruct fixed_point_share_struct;
+        fixed_point_share_struct.v = fixed_point_share_struct_v;
+        fixed_point_share_struct.k = k;
+        fixed_point_share_struct.f = f;
+
+        return fixed_point_share_struct;
+      }
+      case MpcProtocol::kBooleanGmw: {
+        throw std::runtime_error(
+            "Non-binary types have to be converted to BitVectors in BooleanGMW, "
+            "consider using TODO function for the input_vector");
+      }
+      case MpcProtocol::kBmr: {
+        throw std::runtime_error(
+            "Non-binary types have to be converted to BitVectors in BMR, "
+            "consider using TODO function for the input_vector");
+      }
+      default: {
+        throw(std::runtime_error(
+            fmt::format("Unknown MPC protocol with id {}", static_cast<unsigned int>(P))));
+      }
+    }
+  }
+
+  template <MpcProtocol P, typename T = __uint128_t>
+  FixedPointShareStruct InFixedPoint(
+      const T& input, std::size_t k = 41, std::size_t f = 20,
+      std::size_t party_id = std::numeric_limits<std::size_t>::max()) {
+    switch (P) {
+      case MpcProtocol::kArithmeticConstant: {
+        FixedPointShareStruct fixed_point_share_struct;
+
+        FixedPointStruct<T> fixed_point_struct = CreateFixedPointStruct<T>(input, k, f);
+
+        ShareWrapper constant_arithmetic_gmw_share_v =
+            backend_->ConstantArithmeticGmwInput<T>(fixed_point_struct.v);
+
+        fixed_point_share_struct.v = constant_arithmetic_gmw_share_v;
+        fixed_point_share_struct.k = k;
+        fixed_point_share_struct.f = f;
+
+        return fixed_point_share_struct;
+      }
+      case MpcProtocol::kArithmeticGmw: {
+        FixedPointStruct fixed_point_struct = CreateFixedPointStruct<T>(input, k, f);
+
+        ShareWrapper fixed_point_share_struct_v =
+            backend_->ArithmeticGmwInput<T>(party_id, fixed_point_struct.v);
+        FixedPointShareStruct fixed_point_share_struct;
+        fixed_point_share_struct.v = fixed_point_share_struct_v;
+        fixed_point_share_struct.k = k;
+        fixed_point_share_struct.f = f;
+
+        return fixed_point_share_struct;
+      }
+      case MpcProtocol::kBooleanGmw: {
+        throw std::runtime_error(
+            "Non-binary types have to be converted to BitVectors in BooleanGMW, "
+            "consider using TODO function for the input");
+      }
+      case MpcProtocol::kBmr: {
+        throw std::runtime_error(
+            "Non-binary types have to be converted to BitVectors in BMR, "
+            "consider using TODO function for the input");
+      }
+      default: {
+        throw(std::runtime_error(
+            fmt::format("Unknown MPC protocol with id {}", static_cast<unsigned int>(P))));
+      }
+    }
+  }
+
+  template <MpcProtocol P, typename T = __uint128_t>
+  FixedPointShareStruct InFixedPoint(
+      const std::vector<T>& input_vector, std::size_t k = 41, std::size_t f = 20,
+      std::size_t party_id = std::numeric_limits<std::size_t>::max()) {
+    switch (P) {
+      case MpcProtocol::kArithmeticConstant: {
+        FixedPointShareStruct fixed_point_share_struct;
+
+        FixedPointVectorStruct<T> fixed_point_struct =
+            CreateFixedPointVectorStruct<T>(input_vector, k, f);
+
+        ShareWrapper constant_arithmetic_gmw_share_v =
+            backend_->ConstantArithmeticGmwInput<T>(fixed_point_struct.v_vector);
+
+        fixed_point_share_struct.v = constant_arithmetic_gmw_share_v;
+        fixed_point_share_struct.k = k;
+        fixed_point_share_struct.f = f;
+
+        return fixed_point_share_struct;
+      }
+      case MpcProtocol::kArithmeticGmw: {
+        FixedPointVectorStruct<T> fixed_point_struct =
+            CreateFixedPointVectorStruct<T>(input_vector, k, f);
+
+        ShareWrapper fixed_point_share_struct_v =
+            backend_->ArithmeticGmwInput<T>(party_id, fixed_point_struct.v_vector);
+        FixedPointShareStruct fixed_point_share_struct;
+        fixed_point_share_struct.v = fixed_point_share_struct_v;
+        fixed_point_share_struct.k = k;
+        fixed_point_share_struct.f = f;
+
+        return fixed_point_share_struct;
+      }
+      case MpcProtocol::kBooleanGmw: {
+        throw std::runtime_error(
+            "Non-binary types have to be converted to BitVectors in BooleanGMW, "
+            "consider using TODO function for the input");
+      }
+      case MpcProtocol::kBmr: {
+        throw std::runtime_error(
+            "Non-binary types have to be converted to BitVectors in BMR, "
+            "consider using TODO function for the input");
+      }
+      default: {
+        throw(std::runtime_error(
+            fmt::format("Unknown MPC protocol with id {}", static_cast<unsigned int>(P))));
+      }
+    }
+  }
+
   template <MpcProtocol P, typename T, typename = std::enable_if_t<std::is_integral_v<T>>>
   SharePointer In(T input, std::size_t party_id = std::numeric_limits<std::size_t>::max()) {
     if constexpr (std::is_same_v<T, bool>) {
-      if constexpr (P == MpcProtocol::kBooleanGmw)
+      if constexpr (P == MpcProtocol::kBooleanGmw) {
         return backend_->BooleanGmwInput(party_id, input);
-      else
+      } else if constexpr (P == MpcProtocol::kBmr) {
         return backend_->BmrInput(party_id, input);
+      } else if constexpr (P == MpcProtocol::kGarbledCircuit) {
+        return backend_->BmrInput(party_id, input);
+      }
     } else {
       return In<P, T>(std::vector<T>{input}, party_id);
     }
@@ -391,6 +736,116 @@ class Party {
         throw(std::runtime_error(
             fmt::format("Unknown MPC protocol with id {}", static_cast<unsigned int>(P))));
       }
+    }
+  }
+
+  // added by Liang Zhao
+  template <MpcProtocol P>
+  SharePointer ConstantSharedIn(std::span<const BitVector<>> input) {
+    static_assert(P != MpcProtocol::kArithmeticGmw);
+    static_assert(P != MpcProtocol::kArithmeticConstant);
+    static_assert(P != MpcProtocol::kAstra);
+    static_assert(P != MpcProtocol::kBooleanConstant);
+    switch (P) {
+      case MpcProtocol::kBooleanGmw: {
+        return backend_->ConstantAsBooleanGmwInput(input);
+      }
+        // TODO
+        //   case MpcProtocol::kBmr: {
+        //     return backend_->BmrInput(party_id, input);
+        //   }
+        //   case MpcProtocol::kGarbledCircuit: {
+        //     return backend_->GarbledCircuitInput(party_id, input);
+        //   }
+      default: {
+        throw(std::runtime_error(
+            fmt::format("Unknown MPC protocol with id {}", static_cast<unsigned int>(P))));
+      }
+    }
+  }
+
+  template <MpcProtocol P>
+  SharePointer ConstantSharedIn(std::vector<BitVector<>>&& input) {
+    static_assert(P != MpcProtocol::kArithmeticGmw);
+    static_assert(P != MpcProtocol::kArithmeticConstant);
+    static_assert(P != MpcProtocol::kAstra);
+    static_assert(P != MpcProtocol::kBooleanConstant);
+    switch (P) {
+      case MpcProtocol::kBooleanGmw: {
+        return backend_->ConstantAsBooleanGmwInput(std::move(input));
+      }
+        // TODO
+        //   case MpcProtocol::kBmr: {
+        //     return backend_->BmrInput(party_id, input);
+        //   }
+        //   case MpcProtocol::kGarbledCircuit: {
+        //     return backend_->GarbledCircuitInput(party_id, input);
+        //   }
+      default: {
+        throw(std::runtime_error(
+            fmt::format("Unknown MPC protocol with id {}", static_cast<unsigned int>(P))));
+      }
+    }
+  }
+
+  template <MpcProtocol P>
+  SharePointer ConstantSharedIn(const BitVector<>& input) {
+    static_assert(P != MpcProtocol::kArithmeticGmw);
+    static_assert(P != MpcProtocol::kArithmeticConstant);
+    static_assert(P != MpcProtocol::kAstra);
+    static_assert(P != MpcProtocol::kBooleanConstant);
+    switch (P) {
+      case MpcProtocol::kBooleanGmw: {
+        return backend_->ConstantAsBooleanGmwInput(input);
+      }
+      case MpcProtocol::kBmr: {
+        return backend_->ConstantAsBmrInput(input);
+      }
+      case MpcProtocol::kGarbledCircuit: {
+        return backend_->ConstantAsGCInput(input);
+      }
+      default: {
+        throw(std::runtime_error(
+            fmt::format("Unknown MPC protocol with id {}", static_cast<unsigned int>(P))));
+      }
+    }
+  }
+
+  template <MpcProtocol P>
+  SharePointer ConstantSharedIn(BitVector<>&& input) {
+    static_assert(P != MpcProtocol::kArithmeticGmw);
+    static_assert(P != MpcProtocol::kArithmeticConstant);
+    static_assert(P != MpcProtocol::kAstra);
+    static_assert(P != MpcProtocol::kBooleanConstant);
+    switch (P) {
+      case MpcProtocol::kBooleanGmw: {
+        return backend_->ConstantAsBooleanGmwInput(std::move(input));
+      }
+      case MpcProtocol::kBmr: {
+        return backend_->ConstantAsBmrInput(input);
+      }
+      case MpcProtocol::kGarbledCircuit: {
+        return backend_->ConstantAsGCInput(input);
+      }
+      default: {
+        throw(std::runtime_error(
+            fmt::format("Unknown MPC protocol with id {}", static_cast<unsigned int>(P))));
+      }
+    }
+  }
+
+  template <MpcProtocol P, typename T, typename = std::enable_if_t<std::is_integral_v<T>>>
+  SharePointer ConstantSharedIn(T input) {
+    if constexpr (std::is_same_v<T, bool>) {
+      if constexpr (P == MpcProtocol::kBooleanGmw) {
+        return backend_->ConstantAsBooleanGmwInput(input);
+      } else if constexpr (P == MpcProtocol::kBmr) {
+        return backend_->ConstantAsBmrInput(input);
+      } else if constexpr (P == MpcProtocol::kGarbledCircuit) {
+        return backend_->ConstantAsGCInput(input);
+      }
+    } else {
+      return ConstantSharedIn<P, T>(std::vector<T>{input});
     }
   }
 

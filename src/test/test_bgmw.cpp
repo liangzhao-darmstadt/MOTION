@@ -864,7 +864,58 @@ TEST(BooleanGmw, Or_64_bit_10_Simd_2_3_parties) {
   }
 }
 
+// added by Liang Zhao
+TEST(BooleanGmw, ConstantAsSharedInput_1_1K_Simd_2_3_4_5_10_parties) {
+  for (auto i = 0ull; i < kTestIterations; ++i) {
+    constexpr auto kBooleanGmw = encrypto::motion::MpcProtocol::kBooleanGmw;
+    std::srand(std::time(nullptr));
+    for (auto number_of_parties : kNumberOfPartiesList) {
+      const auto global_input_1 = (std::rand() % 2) == 1;
+      const auto global_input_1K = encrypto::motion::BitVector<>::SecureRandom(1000);
+      try {
+        std::vector<PartyPointer> motion_parties(
+            std::move(MakeLocallyConnectedParties(number_of_parties, kPortOffset)));
+        for (auto& party : motion_parties) {
+          party->GetLogger()->SetEnabled(kDetailedLoggingEnabled);
+          party->GetConfiguration()->SetOnlineAfterSetup(i % 2 == 1);
+        }
+#pragma omp parallel num_threads(motion_parties.size() + 1) default(shared)
+#pragma omp single
+#pragma omp taskloop num_tasks(motion_parties.size())
+        for (auto party_id = 0u; party_id < motion_parties.size(); ++party_id) {
+          bool input_1 = false;
+          encrypto::motion::BitVector<> input_1K(global_input_1K.GetSize(), false);
+          input_1 = global_input_1;
+          input_1K = global_input_1K;
 
+          encrypto::motion::ShareWrapper share_input_1 =
+              motion_parties.at(party_id)->ConstantSharedIn<kBooleanGmw>(input_1);
+          encrypto::motion::ShareWrapper share_input_1K =
+              motion_parties.at(party_id)->ConstantSharedIn<kBooleanGmw>(input_1K);
+
+          auto share_output_1 = share_input_1.Out();
+          auto share_output_1K = share_input_1K.Out();
+
+          motion_parties.at(party_id)->Run();
+
+          auto wire_1 = std::dynamic_pointer_cast<encrypto::motion::proto::boolean_gmw::Wire>(
+              share_output_1->GetWires().at(0));
+          auto wire_1K = std::dynamic_pointer_cast<encrypto::motion::proto::boolean_gmw::Wire>(
+              share_output_1K->GetWires().at(0));
+
+          assert(wire_1);
+          assert(wire_1K);
+
+          EXPECT_EQ(wire_1->GetValues().Get(0), global_input_1);
+          EXPECT_EQ(wire_1K->GetValues(), global_input_1K);
+          motion_parties.at(party_id).reset();
+        }
+      } catch (std::exception& e) {
+        std::cerr << e.what() << std::endl;
+      }
+    }
+  }
+}
 
 class PartyGenerator {
  protected:
@@ -918,68 +969,69 @@ class SeededRandomnessGenerator {
   std::mt19937_64 random_{0};
 };
 
-template <typename T>
-class TypedSignedBgmwTest : public testing::Test,
-                            public PartyGenerator,
-                            public SeededRandomnessGenerator {
- public:
-  void SetUp() override {
-    GenerateParties(false);
-    GenerateRandomValues();
-  }
+// commented out by Liang Zhao
+// template <typename T>
+// class TypedSignedBgmwTest : public testing::Test,
+//                             public PartyGenerator,
+//                             public SeededRandomnessGenerator {
+//  public:
+//   void SetUp() override {
+//     GenerateParties(false);
+//     GenerateRandomValues();
+//   }
 
- protected:
-  void GenerateRandomValues() {
-    values_a_ = RandomIntegers<T>(vector_size_);
-    values_b_ = RandomIntegers<T>(vector_size_);
-  }
+//  protected:
+//   void GenerateRandomValues() {
+//     values_a_ = RandomIntegers<T>(vector_size_);
+//     values_b_ = RandomIntegers<T>(vector_size_);
+//   }
 
-  std::vector<T> values_a_, values_b_;
-  std::size_t vector_size_{1000};
-};
+//   std::vector<T> values_a_, values_b_;
+//   std::size_t vector_size_{1000};
+// };
 
-using SignedIntegerTypes = ::testing::Types<std::int8_t, std::int16_t, std::int32_t, std::int64_t>;
-TYPED_TEST_SUITE(TypedSignedBgmwTest, SignedIntegerTypes);
+// using SignedIntegerTypes = ::testing::Types<std::int8_t, std::int16_t, std::int32_t, std::int64_t>;
+// TYPED_TEST_SUITE(TypedSignedBgmwTest, SignedIntegerTypes);
 
-TYPED_TEST(TypedSignedBgmwTest, SignedSubtraction_1K_Simd_2_parties) {
-  constexpr auto kArithmeticGmw = encrypto::motion::MpcProtocol::kArithmeticGmw;
-  std::vector<std::future<void>> futures;
+// TYPED_TEST(TypedSignedBgmwTest, SignedSubtraction_1K_Simd_2_parties) {
+//   constexpr auto kArithmeticGmw = encrypto::motion::MpcProtocol::kArithmeticGmw;
+//   std::vector<std::future<void>> futures;
 
-  for (auto party_id = 0u; party_id < this->parties_.size(); ++party_id) {
-    futures.push_back(std::async(std::launch::async, [this, party_id]() {
-      encrypto::motion::SecureSignedInteger share_values_a_, share_values_b_;
-      // If my input - real input, otherwise a dummy 0 (-vector).
-      // Should not make any difference, just for consistency...
-      std::vector<TypeParam> selected_values_a_ =
-          party_id == 0 ? this->values_a_ : std::vector<TypeParam>(this->values_a_.size(), 0);
-      std::vector<TypeParam> selected_values_b_ =
-          party_id == 0 ? this->values_b_ : std::vector<TypeParam>(this->values_b_.size(), 0);
+//   for (auto party_id = 0u; party_id < this->parties_.size(); ++party_id) {
+//     futures.push_back(std::async(std::launch::async, [this, party_id]() {
+//       encrypto::motion::SecureSignedInteger share_values_a_, share_values_b_;
+//       // If my input - real input, otherwise a dummy 0 (-vector).
+//       // Should not make any difference, just for consistency...
+//       std::vector<TypeParam> selected_values_a_ =
+//           party_id == 0 ? this->values_a_ : std::vector<TypeParam>(this->values_a_.size(), 0);
+//       std::vector<TypeParam> selected_values_b_ =
+//           party_id == 0 ? this->values_b_ : std::vector<TypeParam>(this->values_b_.size(), 0);
 
-      share_values_a_ =
-          this->parties_.at(party_id)->template In<encrypto::motion::MpcProtocol::kBooleanGmw>(
-              ToInput(selected_values_a_), 0);
-      share_values_b_ =
-          this->parties_.at(party_id)->template In<encrypto::motion::MpcProtocol::kBooleanGmw>(
-              ToInput(selected_values_b_), 0);
+//       share_values_a_ =
+//           this->parties_.at(party_id)->template In<encrypto::motion::MpcProtocol::kBooleanGmw>(
+//               ToInput(selected_values_a_), 0);
+//       share_values_b_ =
+//           this->parties_.at(party_id)->template In<encrypto::motion::MpcProtocol::kBooleanGmw>(
+//               ToInput(selected_values_b_), 0);
 
-      auto share_sub = share_values_a_ - share_values_b_;
+//       auto share_sub = share_values_a_ - share_values_b_;
 
-      auto share_output = share_sub.Out();
+//       auto share_output = share_sub.Out();
 
-      this->parties_.at(party_id)->Run();
+//       this->parties_.at(party_id)->Run();
 
-      auto circuit_result = share_output.As<std::vector<TypeParam>>();
-      std::vector<TypeParam> expected_result;
-      expected_result.reserve(circuit_result.size());
-      for (std::size_t i = 0; i < this->values_a_.size(); ++i) {
-        expected_result.emplace_back(this->values_a_[i] - this->values_b_[i]);
-      }
-      EXPECT_EQ(circuit_result, expected_result);
+//       auto circuit_result = share_output.As<std::vector<TypeParam>>();
+//       std::vector<TypeParam> expected_result;
+//       expected_result.reserve(circuit_result.size());
+//       for (std::size_t i = 0; i < this->values_a_.size(); ++i) {
+//         expected_result.emplace_back(this->values_a_[i] - this->values_b_[i]);
+//       }
+//       EXPECT_EQ(circuit_result, expected_result);
 
-      this->parties_.at(party_id)->Finish();
-    }));
-  }
-  for (auto& future : futures) future.get();
-}
+//       this->parties_.at(party_id)->Finish();
+//     }));
+//   }
+//   for (auto& future : futures) future.get();
+// }
 
-}
+}  // namespace

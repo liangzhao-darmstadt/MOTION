@@ -1,6 +1,6 @@
 // MIT License
 //
-// Copyright (c) 2021 Oleksandr Tkachenko, Arianne Roselina Prananto
+// Copyright (c) 2021-2022 Oleksandr Tkachenko, Arianne Roselina Prananto, Liang Zhao
 // Cryptography and Privacy Engineering Group (ENCRYPTO)
 // TU Darmstadt, Germany
 //
@@ -25,11 +25,16 @@
 #pragma once
 
 #include "protocols/share_wrapper.h"
-
+#include "secure_type/secure_fixed_point_circuit_CBMC.h"
+#include "secure_type/secure_floating_point_circuit_ABY.h"
 namespace encrypto::motion {
 
 class Logger;
 
+class SecureFixedPointCircuitCBMC;
+class SecureFloatingPointCircuitABY;
+
+// ! 128-bit circuit for division, modular reduction are not optimized because of HyCC
 class SecureUnsignedInteger {
  public:
   SecureUnsignedInteger() = default;
@@ -100,14 +105,85 @@ class SecureUnsignedInteger {
     return *this;
   }
 
+  ShareWrapper operator<(const SecureUnsignedInteger& other) const;
+
   ShareWrapper operator>(const SecureUnsignedInteger& other) const;
 
   ShareWrapper operator==(const SecureUnsignedInteger& other) const;
 
+  /// \brief operations with constant value
+  // // TODO: support garbled circuit protocol
+  template <typename T,
+            typename = std::enable_if_t<std::is_unsigned_v<T> || std::is_same_v<T, __uint128_t>>>
+  SecureUnsignedInteger operator+(const T& constant_value) const;
+
+  template <typename T,
+            typename = std::enable_if_t<std::is_unsigned_v<T> || std::is_same_v<T, __uint128_t>>>
+  SecureUnsignedInteger operator-(const T& constant_value) const;
+
+  template <typename T,
+            typename = std::enable_if_t<std::is_unsigned_v<T> || std::is_same_v<T, __uint128_t>>>
+  SecureUnsignedInteger operator*(const T& constant_value) const;
+
+  template <typename T,
+            typename = std::enable_if_t<std::is_unsigned_v<T> || std::is_same_v<T, __uint128_t>>>
+  SecureUnsignedInteger operator/(const T& constant_value) const;
+
+  template <typename T,
+            typename = std::enable_if_t<std::is_unsigned_v<T> || std::is_same_v<T, __uint128_t>>>
+  ShareWrapper operator<(const T& constant_value) const;
+
+  template <typename T,
+            typename = std::enable_if_t<std::is_unsigned_v<T> || std::is_same_v<T, __uint128_t>>>
+  ShareWrapper operator>(const T& constant_value) const;
+
+  template <typename T,
+            typename = std::enable_if_t<std::is_unsigned_v<T> || std::is_same_v<T, __uint128_t>>>
+  ShareWrapper operator==(const T& constant_value) const;
+
+  // multiplication each Boolean bit of *this with a bit share
+  SecureUnsignedInteger MulBooleanBit(const ShareWrapper& boolean_gmw_bmr_gc_bit_share_other) const;
+
+  /// \brief equals to zero
+  ShareWrapper IsZero() const;
+
+  /// \brief is greater than or equals to
+  ShareWrapper GE(const SecureUnsignedInteger& other) const;
+
+  /// \brief is less than or equals to
+  ShareWrapper LE(const SecureUnsignedInteger& other) const;
+
+  /// \brief modular reduction with m
+  // ! Note: the circuis is generated with HyCC, but the depth-optimized and size-optimized circuit
+  // has almost the same non-XOR gate depth and number of non-XOR gates
+  SecureUnsignedInteger Mod(const SecureUnsignedInteger& secure_unsigned_integer_m) const;
+
+  /// \brief modular reduction with constant value m
+  // ! Note: the circuis is generated with HyCC, but the depth-optimized and size-optimized circuit
+  // has almost the same non-XOR gate depth and number of non-XOR gates
+  template <typename T>
+  SecureUnsignedInteger Mod(const T& m) const;
+
+  // convert *this to negative integer according to sign (i.e., positive integer if sign = 0,
+  // negative integer otherwise)
+  SecureUnsignedInteger Neg(const ShareWrapper& boolean_gmw_bmr_gc_share_sign) const;
+
+  // TODO
+  // convert *this to a negative integer
+  SecureUnsignedInteger Neg() const;
+
+  // ShareWrapper LTZ() const;
+
+  // TODO; generate circuit for uint
+  // convert integer to SecureFloatingPointCircuitESAT
+  SecureFloatingPointCircuitABY Int2FL(std::size_t floating_point_bit_length = 64) const;
+
+  SecureFixedPointCircuitCBMC Int2Fx(std::size_t fraction_bit_size = 16) const;
+
   /// \brief internally extracts the ShareWrapper/SharePointer from input and
   /// calls ShareWrapper::Simdify(std::span<SharePointer> input)
   static SecureUnsignedInteger Simdify(std::span<SecureUnsignedInteger> input);
-  //
+
   /// \brief internally extracts shares from each entry in input and calls
   /// Simdify(std::span<SecureUnsignedInteger> input) from the result
   static SecureUnsignedInteger Simdify(std::vector<SecureUnsignedInteger>&& input);
@@ -119,6 +195,11 @@ class SecureUnsignedInteger {
   /// \brief constructs a SubsetGate that returns values stored at positions in this->share_.
   /// Internally calls SecureUnsignedInteger Subset(std::span<std::size_t> positions).
   SecureUnsignedInteger Subset(std::vector<size_t>&& positions);
+
+  // added by Liang Zhao
+  // truncate the this SecureUnsignedInteger to a half size SecureUnsignedInteger that takes the
+  // bits from the least significant bit
+  ShareWrapper TruncateToHalfSize();
 
   /// \brief decomposes this->share_->Get() into shares with exactly 1 SIMD value.
   /// See the description in ShareWrapper::Unsimdify for reference.
@@ -135,12 +216,18 @@ class SecureUnsignedInteger {
   template <typename T>
   T As() const;
 
+  /// \brief converts the information on the wires to a veoctor of T in type Unsigned Integer.
+  /// See the description in ShareWrapper::As for reference.
+  template <typename T, typename A = std::allocator<T>>
+  std::vector<T, A> AsVector() const;
+
  private:
   std::shared_ptr<ShareWrapper> share_{nullptr};
   std::shared_ptr<Logger> logger_{nullptr};
 
-  std::string ConstructPath(const IntegerOperationType type, const std::size_t bitlength,
-                            std::string suffix = "") const;
+  std::string ConstructPath(const UnsignedIntegerOperationType type, const std::size_t bitlength,
+                            std::string suffix = "",
+                            const std::size_t floating_point_bit_length = 64) const;
 };
 
 }  // namespace encrypto::motion

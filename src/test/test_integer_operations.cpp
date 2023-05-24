@@ -45,7 +45,7 @@ using namespace encrypto::motion;
 namespace {
 TEST(AlgorithmDescription, FromBristolFormatIntAdd8Size) {
   const auto int_add8 = encrypto::motion::AlgorithmDescription::FromBristol(
-      std::string(encrypto::motion::kRootDir) + "/circuits/int/int_add8_size.bristol");
+      std::string(encrypto::motion::kRootDir) + "/circuits/unsigned_integer/uint8_add_size.bristol");
   EXPECT_EQ(int_add8.number_of_gates, 34);
   EXPECT_EQ(int_add8.gates.size(), 34);
   EXPECT_EQ(int_add8.number_of_output_wires, 8);

@@ -142,6 +142,35 @@ class Backend : public std::enable_shared_from_this<Backend> {
 
   SharePointer BooleanGmwInput(std::size_t party_id, std::vector<BitVector<>>&& input);
 
+  // added by Liang Zhao
+  // share a constant (publicly known before circuit evaluation) value as Boolean gmw share without
+  // interaction, i.e., one party holds the constant values and the other parities holds value of
+  // zero
+  SharePointer ConstantAsBooleanGmwInput(bool input = false);
+  SharePointer ConstantAsBooleanGmwInput(BitVector<>&& input);
+  SharePointer ConstantAsBooleanGmwInput(const BitVector<>& input);
+  SharePointer ConstantAsBooleanGmwInput(std::vector<BitVector<>>&& input);
+  SharePointer ConstantAsBooleanGmwInput(const std::vector<BitVector<>>& input);
+  SharePointer ConstantAsBooleanGmwInput(std::span<const BitVector<>> input);
+
+  // added by Liang Zhao
+  // take the value of Boolean shares as parties' private input and reshare it
+  SharePointer ReshareBooleanGmwShareAsInput(std::size_t party_id,
+                                             const proto::boolean_gmw::SharePointer& a);
+
+  // added by Liang Zhao
+  SharePointer ReshareBooleanGmwShareAsInput(std::size_t party_id, const SharePointer& a);
+
+  // added by Liang Zhao
+  // take the value of Boolean shares as parties' private input and reshare it
+  // ??? to do later,
+  template <typename T>
+  SharePointer ReshareArithmeticGmwShareAsInput(std::size_t party_id,
+                                                const proto::arithmetic_gmw::SharePointer<T>& a);
+
+  // added by Liang Zhao
+  template <typename T>
+  SharePointer ReshareArithmeticGmwShareAsInput(std::size_t party_id, const SharePointer& a);
   SharePointer BooleanGmwOutput(const SharePointer& parent, std::size_t output_owner);
 
   SharePointer BmrInput(std::size_t party_id, bool input = false);
@@ -154,11 +183,27 @@ class Backend : public std::enable_shared_from_this<Backend> {
 
   SharePointer BmrInput(std::size_t party_id, std::vector<BitVector<>>&& input);
 
+  // added by Liang Zhao
+  // TODO: find better method to input constant value in BMR without interaction
+  // TODO: use BmrInput to input constant values 0 and 1 to get bmr_share_0 and bmr_share_1, then
+  // use bmr_share_0 and bmr_share_1 to build the BMR shares of other constant values
+  SharePointer ConstantAsBmrInput(bool input = false);
+  SharePointer ConstantAsBmrInput(const BitVector<>& input);
+  SharePointer ConstantAsBmrInput(BitVector<>&& input);
+  SharePointer ConstantAsBmrInput(std::span<const BitVector<>> input);
+  SharePointer ConstantAsBmrInput(std::vector<BitVector<>>&& input);
+
+  SharePointer ConstantAsGCInput(bool input = false);
+  SharePointer ConstantAsGCInput(const BitVector<>& input);
+  SharePointer ConstantAsGCInput(BitVector<>&& input);
+  SharePointer ConstantAsGCInput(std::span<const BitVector<>> input);
+  SharePointer ConstantAsGCInput(std::vector<BitVector<>>&& input);
+
   SharePointer BmrOutput(const SharePointer& parent, std::size_t output_owner);
 
   template <typename T, typename = std::enable_if_t<std::is_unsigned_v<T>>>
   SharePointer ConstantArithmeticGmwInput(T input = 0) {
-    return ConstantArithmeticGmwInput({input});
+    return ConstantArithmeticGmwInput<T>({input});
   }
 
   template <typename T, typename = std::enable_if_t<std::is_unsigned_v<T>>>
@@ -191,6 +236,9 @@ class Backend : public std::enable_shared_from_this<Backend> {
   template <typename T>
   SharePointer ArithmeticGmwOutput(const SharePointer& parent, std::size_t output_owner);
 
+  // added by Liang Zhao
+  SharePointer ConstantArithmeticGmwOutput(const SharePointer& parent, std::size_t output_owner);
+
   template <typename T>
   SharePointer AstraInput(std::size_t party_id, T input = 0);
 
@@ -213,9 +261,8 @@ class Backend : public std::enable_shared_from_this<Backend> {
 
   SharePointer GarbledCircuitInput(std::size_t party_id, std::vector<BitVector<>>&& input);
 
-  std::pair<SharePointer, ReusableFiberPromise<std::vector<BitVector<>>>*>
-  GarbledCircuitInput(std::size_t party_id, std::size_t number_of_wires,
-                      std::size_t number_of_simd);
+  std::pair<SharePointer, ReusableFiberPromise<std::vector<BitVector<>>>*> GarbledCircuitInput(
+      std::size_t party_id, std::size_t number_of_wires, std::size_t number_of_simd);
 
   SharePointer GarbledCircuitOutput(const SharePointer& parent, std::size_t output_owner);
 

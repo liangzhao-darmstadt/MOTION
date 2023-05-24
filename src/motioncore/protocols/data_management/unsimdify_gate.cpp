@@ -40,6 +40,12 @@
 #include "utility/constants.h"
 #include "utility/logger.h"
 
+// added by Liang Zhao
+#include "protocols/garbled_circuit/garbled_circuit_constants.h"
+#include "protocols/garbled_circuit/garbled_circuit_gate.h"
+#include "protocols/garbled_circuit/garbled_circuit_share.h"
+#include "protocols/garbled_circuit/garbled_circuit_wire.h"
+
 namespace encrypto::motion {
 
 UnsimdifyGate::UnsimdifyGate(const SharePointer& parent) : OneGate(parent->GetBackend()) {
@@ -101,6 +107,15 @@ UnsimdifyGate::UnsimdifyGate(const SharePointer& parent) : OneGate(parent->GetBa
                     backend_, std::size_t(1)));
             break;
           }
+
+          // added by Liang Zhao
+          case 128: {
+            output_wires_.emplace_back(
+                GetRegister().EmplaceWire<proto::ConstantArithmeticWire<__uint128_t>>(
+                    backend_, std::size_t(1)));
+            break;
+          }
+
           default:
             throw std::invalid_argument(
                 fmt::format("Trying to create a ConstantArithmeticShare with invalid bitlength: {}",
@@ -134,6 +149,14 @@ UnsimdifyGate::UnsimdifyGate(const SharePointer& parent) : OneGate(parent->GetBa
                     backend_, std::size_t(1)));
             break;
           }
+
+            // added by Liang Zhao
+          case 128: {
+            output_wires_.emplace_back(
+                GetRegister().EmplaceWire<proto::arithmetic_gmw::Wire<__uint128_t>>(
+                    backend_, std::size_t(1)));
+            break;
+          }
           default:
             throw std::invalid_argument(fmt::format(
                 "Trying to create a proto::arithmetic_gmw::Share with invalid bitlength: {}",
@@ -163,6 +186,14 @@ UnsimdifyGate::UnsimdifyGate(const SharePointer& parent) : OneGate(parent->GetBa
                 GetRegister().EmplaceWire<proto::astra::Wire<std::uint64_t>>(backend_, 1));
             break;
           }
+
+          // added by Liang Zhao
+          case 128: {
+            output_wires_.emplace_back(
+                GetRegister().EmplaceWire<proto::astra::Wire<__uint128_t>>(backend_, 1));
+            break;
+          }
+
           default:
             throw std::invalid_argument(
                 fmt::format("Trying to create a proto::astra::Share with invalid bitlength: {}",
@@ -175,6 +206,14 @@ UnsimdifyGate::UnsimdifyGate(const SharePointer& parent) : OneGate(parent->GetBa
             GetRegister().EmplaceWire<proto::bmr::Wire>(backend_, std::size_t(1)));
         break;
       }
+
+        // added by Liang Zhao
+      case encrypto::motion::MpcProtocol::kGarbledCircuit: {
+        output_wires_.emplace_back(
+            GetRegister().EmplaceWire<proto::garbled_circuit::Wire>(backend_, std::size_t(1)));
+        break;
+      }
+
       case encrypto::motion::MpcProtocol::kBooleanConstant: {
         output_wires_.emplace_back(
             GetRegister().EmplaceWire<proto::ConstantBooleanWire>(backend_, std::size_t(1)));
@@ -212,6 +251,34 @@ void UnsimdifyGate::EvaluateSetup() {
         out->GetMutableSecretKeys()[0] = in->GetSecretKeys()[j];
         out->SetSetupIsReady();
       }
+    }
+  }
+
+  // added by Liang Zhao
+  else if (parent_[0]->GetProtocol() == MpcProtocol::kGarbledCircuit) {
+    bool is_garbler =
+        GetCommunicationLayer().GetMyId() == static_cast<std::size_t>(GarbledCircuitRole::kGarbler);
+
+    // this party is the garbler
+    if (is_garbler) {
+      for (std::size_t i = 0; i < parent_.size(); ++i) {
+        auto in = std::dynamic_pointer_cast<proto::garbled_circuit::Wire>(parent_[i]);
+        assert(in);
+        in->WaitSetup();
+        // in->GetSetupReadyCondition()->Wait();
+        for (std::size_t j = 0; j < parent_[0]->GetNumberOfSimdValues(); ++j) {
+          auto out = std::dynamic_pointer_cast<proto::garbled_circuit::Wire>(
+              output_wires_[j * parent_.size() + i]);
+          assert(out);
+          out->GetMutableKeys().resize(1);
+          out->GetMutableKeys()[0] = in->GetMutableKeys()[j];
+          out->SetSetupIsReady();
+        }
+      }
+    }
+
+    // this party is the evaluator
+    else {
     }
   }
 }
@@ -276,6 +343,13 @@ void UnsimdifyGate::EvaluateOnline() {
           ArithmeticConstantUnsimdifyOnline<std::uint64_t>(parent_[0], output_wires_);
           break;
         }
+
+          // added by Liang Zhao
+        case 128: {
+          ArithmeticConstantUnsimdifyOnline<__uint128_t>(parent_[0], output_wires_);
+          break;
+        }
+
         default:
           throw std::invalid_argument(
               fmt::format("Trying to create a ConstantArithmeticShare with invalid bitlength: {}",
@@ -301,6 +375,13 @@ void UnsimdifyGate::EvaluateOnline() {
           ArithmeticGmwUnsimdifyOnline<std::uint64_t>(parent_[0], output_wires_);
           break;
         }
+
+          // added by Liang Zhao
+        case 128: {
+          ArithmeticGmwUnsimdifyOnline<__uint128_t>(parent_[0], output_wires_);
+          break;
+        }
+
         default:
           throw std::invalid_argument(fmt::format(
               "Trying to create a proto::arithmetic_gmw::Share with invalid bitlength: {}",
@@ -326,6 +407,13 @@ void UnsimdifyGate::EvaluateOnline() {
           AstraUnsimdifyOnline<std::uint64_t>(parent_[0], output_wires_);
           break;
         }
+
+          // added by Liang Zhao
+        case 128: {
+          AstraUnsimdifyOnline<__uint128_t>(parent_[0], output_wires_);
+          break;
+        }
+
         default:
           throw std::invalid_argument(
               fmt::format("Trying to create a proto::astra::Share with invalid bitlength: {}",
@@ -350,6 +438,36 @@ void UnsimdifyGate::EvaluateOnline() {
       }
       break;
     }
+
+    // added by Liang Zhao
+    case encrypto::motion::MpcProtocol::kGarbledCircuit: {
+      const std::size_t number_of_parties{GetConfiguration().GetNumOfParties()};
+      bool is_garbler = GetCommunicationLayer().GetMyId() ==
+                        static_cast<std::size_t>(GarbledCircuitRole::kGarbler);
+
+      // this party is the garbler
+      if (is_garbler) {
+      }
+
+      // this party is the evaluator
+      else {
+        for (std::size_t i = 0; i < parent_.size(); ++i) {
+          auto in = std::dynamic_pointer_cast<proto::garbled_circuit::Wire>(parent_[i]);
+          assert(in);
+          for (std::size_t j = 0; j < input_numer_of_simd; ++j) {
+            auto out = std::dynamic_pointer_cast<proto::garbled_circuit::Wire>(
+                output_wires_[j * parent_.size() + i]);
+            assert(out);
+            out->GetMutableKeys().resize(1);
+            out->GetMutableKeys()[0] = in->GetMutableKeys()[j];
+
+          }
+        }
+      }
+
+      break;
+    }
+
     case encrypto::motion::MpcProtocol::kBooleanConstant: {
       for (std::size_t i = 0; i < parent_.size(); ++i) {
         auto in = std::dynamic_pointer_cast<proto::ConstantBooleanWire>(parent_[i]);
@@ -420,6 +538,15 @@ std::vector<SharePointer> UnsimdifyGate::GetOutputAsVectorOfShares() {
             share = std::static_pointer_cast<Share>(tmp);
             break;
           }
+
+            // added by Liang Zhao
+          case 128: {
+            auto tmp = std::make_shared<proto::ConstantArithmeticShare<__uint128_t>>(output_wires);
+            assert(tmp);
+            share = std::static_pointer_cast<Share>(tmp);
+            break;
+          }
+
           default:
             throw std::invalid_argument(
                 fmt::format("Trying to create a ConstantArithmeticShare with invalid bitlength: {}",
@@ -453,6 +580,15 @@ std::vector<SharePointer> UnsimdifyGate::GetOutputAsVectorOfShares() {
             share = std::static_pointer_cast<Share>(tmp);
             break;
           }
+
+          // added by Liang Zhao
+          case 128: {
+            auto tmp = std::make_shared<proto::arithmetic_gmw::Share<__uint128_t>>(output_wires);
+            assert(tmp);
+            share = std::static_pointer_cast<Share>(tmp);
+            break;
+          }
+
           default:
             throw std::invalid_argument(fmt::format(
                 "Trying to create a proto::arithmetic_gmw::Share with invalid bitlength: {}",
@@ -486,6 +622,15 @@ std::vector<SharePointer> UnsimdifyGate::GetOutputAsVectorOfShares() {
             share = std::static_pointer_cast<Share>(tmp);
             break;
           }
+
+            // added by Liang Zhao
+          case 128: {
+            auto tmp = std::make_shared<proto::astra::Share<__uint128_t>>(output_wires);
+            assert(tmp);
+            share = std::static_pointer_cast<Share>(tmp);
+            break;
+          }
+
           default:
             throw std::invalid_argument(
                 fmt::format("Trying to create a proto::astra::Share with invalid bitlength: {}",
@@ -499,6 +644,15 @@ std::vector<SharePointer> UnsimdifyGate::GetOutputAsVectorOfShares() {
         share = std::static_pointer_cast<Share>(tmp);
         break;
       }
+
+        // added by Liang Zhao
+      case encrypto::motion::MpcProtocol::kGarbledCircuit: {
+        auto tmp = std::make_shared<proto::garbled_circuit::Share>(output_wires);
+        assert(tmp);
+        share = std::static_pointer_cast<Share>(tmp);
+        break;
+      }
+
       case encrypto::motion::MpcProtocol::kBooleanConstant: {
         auto tmp = std::make_shared<proto::ConstantBooleanShare>(output_wires);
         assert(tmp);

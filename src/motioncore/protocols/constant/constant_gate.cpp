@@ -115,5 +115,6 @@ template class ConstantArithmeticInputGate<std::uint8_t>;
 template class ConstantArithmeticInputGate<std::uint16_t>;
 template class ConstantArithmeticInputGate<std::uint32_t>;
 template class ConstantArithmeticInputGate<std::uint64_t>;
+template class ConstantArithmeticInputGate<__uint128_t>;
 
 }  // namespace encrypto::motion::proto

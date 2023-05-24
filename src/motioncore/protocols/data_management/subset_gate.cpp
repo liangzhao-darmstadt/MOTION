@@ -38,6 +38,12 @@
 #include "utility/constants.h"
 #include "utility/logger.h"
 
+// added by Liang Zhao
+#include "protocols/garbled_circuit/garbled_circuit_constants.h"
+#include "protocols/garbled_circuit/garbled_circuit_gate.h"
+#include "protocols/garbled_circuit/garbled_circuit_share.h"
+#include "protocols/garbled_circuit/garbled_circuit_wire.h"
+
 namespace encrypto::motion {
 
 SubsetGate::SubsetGate(const SharePointer& parent, std::vector<std::size_t>&& position_ids)
@@ -105,6 +111,14 @@ SubsetGate::SubsetGate(const SharePointer& parent, std::vector<std::size_t>&& po
                     backend_, position_ids_.size()));
             break;
           }
+
+          // added by Liang Zhao
+          case 128: {
+            output_wires_.emplace_back(
+                GetRegister().EmplaceWire<proto::ConstantArithmeticWire<__uint128_t>>(
+                    backend_, position_ids_.size()));
+            break;
+          }
           default:
             throw std::invalid_argument(
                 fmt::format("Trying to create a ConstantArithmeticShare with invalid bitlength: {}",
@@ -138,6 +152,15 @@ SubsetGate::SubsetGate(const SharePointer& parent, std::vector<std::size_t>&& po
                     backend_, position_ids_.size()));
             break;
           }
+
+            // added by Liang Zhao
+          case 128: {
+            output_wires_.emplace_back(
+                GetRegister().EmplaceWire<proto::arithmetic_gmw::Wire<__uint128_t>>(
+                    backend_, position_ids_.size()));
+            break;
+          }
+
           default:
             throw std::invalid_argument(fmt::format(
                 "Trying to create a proto::arithmetic_gmw::Share with invalid bitlength: {}",
@@ -150,6 +173,13 @@ SubsetGate::SubsetGate(const SharePointer& parent, std::vector<std::size_t>&& po
             GetRegister().EmplaceWire<proto::bmr::Wire>(backend_, position_ids_.size()));
         break;
       }
+
+      case encrypto::motion::MpcProtocol::kGarbledCircuit: {
+        output_wires_.emplace_back(GetRegister().EmplaceWire<proto::garbled_circuit::Wire>(
+            backend_, position_ids_.size()));
+        break;
+      }
+
       case encrypto::motion::MpcProtocol::kBooleanConstant: {
         output_wires_.emplace_back(
             GetRegister().EmplaceWire<proto::ConstantBooleanWire>(backend_, position_ids_.size()));
@@ -186,6 +216,7 @@ void BitVectorSubsetImplementation(const BitVector<Allocator>& in, BitVector<All
 }
 
 void SubsetGate::EvaluateSetup() {
+  // std::cout << "SubsetGate::EvaluateSetup" << std::endl;
   if constexpr (kDebug) {
     GetLogger().LogDebug(
         fmt::format("Nothing to do in the setup phase of SubsetGate with id#{}", gate_id_));
@@ -207,6 +238,51 @@ void SubsetGate::EvaluateSetup() {
         }
       }
       out->SetSetupIsReady();
+    }
+  }
+
+  // added by Liang Zhao
+  else if (parent_[0]->GetProtocol() == MpcProtocol::kGarbledCircuit) {
+    bool is_garbler =
+        GetCommunicationLayer().GetMyId() == static_cast<std::size_t>(GarbledCircuitRole::kGarbler);
+
+    // this party is the garbler
+    if (is_garbler) {
+      // std::cout << "this party is the garbler" << std::endl;
+      for (std::size_t i = 0; i < output_wires_.size(); ++i) {
+        // std::cout << "i: " << i << std::endl;
+        auto in = std::dynamic_pointer_cast<proto::garbled_circuit::Wire>(parent_[i]);
+        assert(in);
+        in->WaitSetup();
+        auto out = std::dynamic_pointer_cast<proto::garbled_circuit::Wire>(output_wires_[i]);
+        assert(out);
+        // std::cout << "001" << std::endl;
+        out->GetMutableKeys().resize(position_ids_.size());
+        // std::cout<<"position_ids_.size(): "<<position_ids_.size()<<std::endl;
+        std::size_t element_counter{0};
+        for (std::size_t j : position_ids_) {
+          // std::cout<<"j: "<<j<<std::endl;
+          // std::cout<<"in->GetKeys()[j]: "<<in->GetKeys()[j].AsString()<<std::endl;
+          out->GetMutableKeys()[element_counter] = in->GetKeys()[j];
+          element_counter++;
+        }
+
+        out->SetSetupIsReady();
+      }
+
+      // std::cout << "SubsetGate::EvaluateSetup finished" << std::endl;
+    }
+
+    // this party is the evaluator
+    else {
+      // std::cout << "this party is the evaluator" << std::endl;
+      // for (std::size_t i = 0; i < output_wires_.size(); ++i) {
+        // auto out = std::dynamic_pointer_cast<proto::garbled_circuit::Wire>(output_wires_[i]);
+        // assert(out);
+
+        // out->GetMutableKeys().resize(position_ids_.size());
+      // }
+      // std::cout << "SubsetGate::EvaluateSetup finished" << std::endl;
     }
   }
 }
@@ -247,6 +323,8 @@ void ArithmeticConstantSubsetOnline(WirePointer parent_wire, WirePointer output_
 }
 
 void SubsetGate::EvaluateOnline() {
+  // std::cout << "SubsetGate::EvaluateOnline" << std::endl;
+
   WaitSetup();
   if constexpr (kDebug) {
     GetLogger().LogDebug(
@@ -278,6 +356,13 @@ void SubsetGate::EvaluateOnline() {
                                                         position_ids_);
           break;
         }
+
+        // added by Liang Zhao
+        case 128: {
+          ArithmeticConstantSubsetOnline<__uint128_t>(parent_[0], output_wires_[0], position_ids_);
+          break;
+        }
+
         default:
           throw std::invalid_argument(
               fmt::format("Trying to create a ConstantArithmeticShare with invalid bitlength: {}",
@@ -301,6 +386,12 @@ void SubsetGate::EvaluateOnline() {
         }
         case 64: {
           ArithmeticGmwSubsetOnline<std::uint64_t>(parent_[0], output_wires_[0], position_ids_);
+          break;
+        }
+
+          // added by Liang Zhao
+        case 128: {
+          ArithmeticGmwSubsetOnline<__uint128_t>(parent_[0], output_wires_[0], position_ids_);
           break;
         }
         default:
@@ -328,6 +419,39 @@ void SubsetGate::EvaluateOnline() {
       }
       break;
     }
+
+      // added by Liang Zhao
+    case encrypto::motion::MpcProtocol::kGarbledCircuit: {
+      const std::size_t number_of_parties{GetConfiguration().GetNumOfParties()};
+
+      bool is_garbler = GetCommunicationLayer().GetMyId() ==
+                        static_cast<std::size_t>(GarbledCircuitRole::kGarbler);
+
+      // this party is the garbler
+      if (is_garbler) {
+        // std::cout << "this party is the evaluator" << std::endl;
+      }
+
+      // this party is the evaluator
+      else {
+        // std::cout << "this party is the evaluator" << std::endl;
+        for (std::size_t i = 0; i < parent_.size(); ++i) {
+          auto in = std::dynamic_pointer_cast<proto::garbled_circuit::Wire>(parent_[i]);
+          assert(in);
+          auto out = std::dynamic_pointer_cast<proto::garbled_circuit::Wire>(output_wires_[i]);
+          assert(out);
+
+          out->GetMutableKeys().resize(position_ids_.size());
+          std::size_t element_counter{0};
+          for (std::size_t j : position_ids_) {
+            out->GetMutableKeys()[element_counter] = in->GetKeys()[j];
+            element_counter++;
+          }
+        }
+      }
+      break;
+    }
+
     case encrypto::motion::MpcProtocol::kBooleanConstant: {
       for (std::size_t i = 0; i < parent_.size(); ++i) {
         auto in = std::dynamic_pointer_cast<proto::ConstantBooleanWire>(parent_[i]);
@@ -385,6 +509,15 @@ const SharePointer SubsetGate::GetOutputAsShare() {
           result = std::static_pointer_cast<Share>(tmp);
           break;
         }
+
+        // added by Liang Zhao
+        case 128: {
+          auto tmp = std::make_shared<proto::ConstantArithmeticShare<__uint128_t>>(output_wires_);
+          assert(tmp);
+          result = std::static_pointer_cast<Share>(tmp);
+          break;
+        }
+
         default:
           throw std::invalid_argument(
               fmt::format("Trying to create a ConstantArithmeticShare with invalid bitlength: {}",
@@ -421,6 +554,15 @@ const SharePointer SubsetGate::GetOutputAsShare() {
           result = std::static_pointer_cast<Share>(tmp);
           break;
         }
+
+          // added by Liang Zhao
+        case 128: {
+          auto tmp = std::make_shared<proto::arithmetic_gmw::Share<__uint128_t>>(output_wires_[0]);
+          assert(tmp);
+          result = std::static_pointer_cast<Share>(tmp);
+          break;
+        }
+
         default:
           throw std::invalid_argument(fmt::format(
               "Trying to create a proto::arithmetic_gmw::Share with invalid bitlength: {}",
@@ -434,6 +576,15 @@ const SharePointer SubsetGate::GetOutputAsShare() {
       result = std::static_pointer_cast<Share>(tmp);
       break;
     }
+
+      // added by Liang Zhao
+    case encrypto::motion::MpcProtocol::kGarbledCircuit: {
+      auto tmp = std::make_shared<proto::garbled_circuit::Share>(output_wires_);
+      assert(tmp);
+      result = std::static_pointer_cast<Share>(tmp);
+      break;
+    }
+
     case encrypto::motion::MpcProtocol::kBooleanConstant: {
       auto tmp = std::make_shared<proto::ConstantBooleanShare>(output_wires_);
       assert(tmp);

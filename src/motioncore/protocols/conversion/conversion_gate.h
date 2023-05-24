@@ -29,6 +29,12 @@
 #include "utility/block.h"
 #include "utility/reusable_future.h"
 
+// added by Liang Zhao
+#include "oblivious_transfer/ot_provider.h"
+
+// otherwise, server compile error
+#include <variant>
+
 namespace encrypto::motion::proto::bmr {
 
 class Share;
@@ -42,6 +48,14 @@ class Share;
 using SharePointer = std::shared_ptr<Share>;
 
 }  // namespace encrypto::motion::proto::boolean_gmw
+
+// added by Liang Zhao
+namespace encrypto::motion::proto::garbled_circuit {
+
+class Share;
+using SharePointer = std::shared_ptr<Share>;
+
+}  // namespace encrypto::motion::proto::garbled_circuit
 
 namespace encrypto::motion {
 
@@ -116,6 +130,97 @@ class ArithmeticGmwToBmrGate final : public OneGate {
 
  private:
   ReusableFiberPromise<std::vector<BitVector<>>>* input_promise_;
+};
+
+class ArithmeticGmwToGCGate final : public OneGate {
+ public:
+  ArithmeticGmwToGCGate(const SharePointer& parent);
+
+  ~ArithmeticGmwToGCGate() final = default;
+
+  void EvaluateSetup() final override;
+
+  void EvaluateOnline() final override;
+
+  bool NeedsSetup() const override { return false; }
+
+  const proto::bmr::SharePointer GetOutputAsGCShare() const;
+
+  const SharePointer GetOutputAsShare() const;
+
+  ArithmeticGmwToGCGate() = delete;
+
+  ArithmeticGmwToGCGate(const Gate&) = delete;
+
+ private:
+  ReusableFiberPromise<std::vector<BitVector<>>>* input_promise_;
+};
+
+// added by Liang Zhao
+class BooleanGmwToGCGate final : public OneGate {
+ public:
+  BooleanGmwToGCGate(const SharePointer& parent);
+
+  ~BooleanGmwToGCGate() final = default;
+
+  void EvaluateSetup() final override;
+
+  void EvaluateOnline() final override;
+
+  const proto::garbled_circuit::SharePointer GetOutputAsGCShare() const;
+
+  const SharePointer GetOutputAsShare() const;
+
+  BooleanGmwToGCGate() = delete;
+
+  BooleanGmwToGCGate(const Gate&) = delete;
+
+ private:
+  // std::vector<ReusableFiberFuture<std::vector<std::uint8_t>>> received_public_values_;
+  // std::vector<ReusableFiberFuture<std::vector<std::uint8_t>>> received_public_keys_;
+
+  bool is_garbler_ = false;
+  bool is_evaluator_ = false;
+
+  std::size_t number_of_simd_ = 0;
+  std::size_t number_of_wires_ = 0;
+  std::size_t my_id_ = 0;
+  std::size_t bitlength_ = 0;
+
+  ReusableFiberPromise<std::vector<BitVector<>>>* garblers_input_promise_;
+  ReusableFiberPromise<std::vector<BitVector<>>>* evaluators_input_promise_;
+
+  /// Promise is only required if the gate for own input is created.
+  std::unique_ptr<GOt128Sender> ots_for_evaluators_inputs_{nullptr};
+
+  /// If this is the evaluator's input, the input label is obtained via OT. If this is the garbler's
+  /// input, the corresponding label is simply transmitted to the evaluator by the garbler and
+  /// retrieved by the evaluator from the future object.
+  std::variant<ReusableFiberFuture<std::vector<std::uint8_t>>, std::unique_ptr<GOt128Receiver>>
+      label_source_;
+};
+
+// added by Liang Zhao
+class GCToBooleanGmwGate final : public OneGate {
+ public:
+  using ValueType = std::vector<BitVector<>>;
+  GCToBooleanGmwGate(const SharePointer& parent);
+
+  ~GCToBooleanGmwGate() final = default;
+
+  void EvaluateSetup() final override;
+
+  void EvaluateOnline() final override;
+
+  bool NeedsSetup() const override { return false; }
+
+  const proto::boolean_gmw::SharePointer GetOutputAsGmwShare() const;
+
+  const SharePointer GetOutputAsShare() const;
+
+  GCToBooleanGmwGate() = delete;
+
+  GCToBooleanGmwGate(const Gate&) = delete;
 };
 
 }  // namespace encrypto::motion

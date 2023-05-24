@@ -32,6 +32,14 @@
 #include "protocols/constant/constant_share.h"
 #include "utility/block.h"
 
+// added by Liang Zhao
+// only for debugging
+#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
+
 namespace encrypto::motion::proto::garbled_circuit {
 
 InputGate::InputGate(std::size_t input_owner_id, std::size_t number_of_wires,
@@ -95,17 +103,26 @@ InputGateGarbler::InputGateGarbler([[maybe_unused]] std::span<const BitVector<>>
 
 InputGateGarbler::InputGateGarbler(std::vector<BitVector<>>&& input, std::size_t input_owner_id,
                                    Backend& backend)
+
     : InputGateGarbler(input_owner_id, input.size(), input[0].GetSize(), backend) {
+  // std::cout << "InputGateGarbler::InputGateGarbler" << std::endl;
+
   // if this party's input, move inputs to the input promise
   if (is_my_input_) GetInputPromise().set_value(std::move(input));
 }
 
 void InputGateGarbler::EvaluateSetup() {
+  // std::cout << "InputGateGarbler::EvaluateSetup" << std::endl;
   for (auto& wire : output_wires_) {
     auto gc_wire = std::dynamic_pointer_cast<garbled_circuit::Wire>(wire);
     assert(gc_wire);
     gc_wire->GetMutableKeys() = Block128Vector::MakeRandom(number_of_simd_);
     // set the bits at positions where we will store the r vector to 0
+
+    // commented by Liang Zhao
+    // ? why set to zero at these positions
+    // ? for each key, its size is kKappa/2
+
     for (auto& key : gc_wire->GetMutableKeys()) {
       BitSpan key_span(key.data(), kKappa);
       key_span.Set(false, 0);
@@ -114,15 +131,28 @@ void InputGateGarbler::EvaluateSetup() {
 
     gc_wire->SetSetupIsReady();
   }
+
+  // // only for debugging
+  // if (GetCommunicationLayer().GetMyId() == static_cast<std::size_t>(GarbledCircuitRole::kGarbler)) {
+  //   std::cout << "InputGateGarbler::EvaluateSetup" << std::endl;
+  //   std::cout << "gc_wire->GetKeys()[wire_i]: " << std::endl;
+  //   for (std::size_t wire_i = 0; wire_i < number_of_wires_; ++wire_i) {
+  //     auto gc_wire{std::dynamic_pointer_cast<garbled_circuit::Wire>(output_wires_[wire_i])};
+  //     std::cout << (gc_wire->GetKeys()[wire_i]).AsString() << std::endl;
+  //   }
+  // }
 }
 
 void InputGateGarbler::EvaluateOnline() {
+  // std::cout << "InputGateGarbler::EvaluateOnline" << std::endl;
+
   // Wait for the wire labels to get generated.
   WaitSetup();
 
   auto& provider{dynamic_cast<ThreeHalvesGarblerProvider&>(GetGarbledCircuitProvider())};
   const Block128& offset{provider.GetOffset()};
 
+  // garbler's input
   if (is_my_input_) {
     if constexpr (kDebug) {
       if (!input_promise_future_.has_value()) {
@@ -177,6 +207,14 @@ void InputGateGarbler::EvaluateOnline() {
     ots_for_evaluators_inputs_->SetInputs(std::move(labels));
     ots_for_evaluators_inputs_->SendMessages();
   }
+
+  // // only for debugging
+  // std::cout << "InputGateGarbler::EvaluateOnline" << std::endl;
+  // std::cout << "gc_wire->GetKeys()[wire_i]: " << std::endl;
+  // for (std::size_t wire_i = 0; wire_i < number_of_wires_; ++wire_i) {
+  //   auto gc_wire{std::dynamic_pointer_cast<garbled_circuit::Wire>(output_wires_[wire_i])};
+  //   std::cout << (gc_wire->GetKeys()[wire_i]).AsString() << std::endl;
+  // }
 }
 
 InputGateEvaluator::InputGateEvaluator(std::size_t input_owner_id, std::size_t number_of_wires,
@@ -211,6 +249,7 @@ InputGateEvaluator::InputGateEvaluator(std::vector<BitVector<>>&& input, std::si
 void InputGateEvaluator::EvaluateSetup() {}
 
 void InputGateEvaluator::EvaluateOnline() {
+  // std::cout << "InputGateEvaluator::EvaluateOnline" << std::endl;
   if (is_my_input_) {
     auto& ot_receiver{std::get<std::unique_ptr<GOt128Receiver>>(label_source_)};
     ot_receiver->WaitSetup();
@@ -244,6 +283,13 @@ void InputGateEvaluator::EvaluateOnline() {
       std::copy_n(wire_block_ptr, number_of_simd_, gc_wire->GetMutableKeys().data());
     }
   }
+
+  // // only for debugging
+  // std::cout << "gc_wire->GetKeys()[wire_i]: " << std::endl;
+  // for (std::size_t wire_i = 0; wire_i < number_of_wires_; ++wire_i) {
+  //   auto gc_wire{std::dynamic_pointer_cast<garbled_circuit::Wire>(output_wires_[wire_i])};
+  //   std::cout << (gc_wire->GetKeys()[wire_i]).AsString() << std::endl;
+  // }
 }
 
 OutputGate::OutputGate(motion::SharePointer parent, std::size_t output_owner)
@@ -398,6 +444,8 @@ encrypto::motion::SharePointer InvGate::GetOutputAsShare() const {
 InvGateGarbler::InvGateGarbler(motion::SharePointer parent) : InvGate(parent) {}
 
 void InvGateGarbler::EvaluateSetup() {
+  // std::cout << "InvGateGarbler::EvaluateSetup" << std::endl;
+
   // xor offset to each key
   auto& garbled_circuit_provider{
       dynamic_cast<ThreeHalvesGarblerProvider&>(GetGarbledCircuitProvider())};
@@ -413,6 +461,16 @@ void InvGateGarbler::EvaluateSetup() {
     for (auto& key : gc_wire_out->GetMutableKeys()) key ^= offset;
     gc_wire_out->SetSetupIsReady();
   }
+
+  // // only for debugging
+  // if (GetCommunicationLayer().GetMyId() ==
+  // static_cast<std::size_t>(GarbledCircuitRole::kGarbler)) {
+  //   std::cout << "gc_wire_in->GetKeys()[wire_i]: " << std::endl;
+  //   for (std::size_t wire_i = 0; wire_i < parent_.size(); ++wire_i) {
+  //     auto gc_wire{std::dynamic_pointer_cast<garbled_circuit::Wire>(parent_[wire_i])};
+  //     std::cout << (gc_wire->GetKeys()[wire_i]).AsString() << std::endl;
+  //   }
+  // }
 }
 
 void InvGateGarbler::EvaluateOnline() {}
@@ -517,7 +575,8 @@ AndGateEvaluator::AndGateEvaluator(motion::SharePointer parent_a, motion::ShareP
 void AndGateEvaluator::EvaluateSetup() {
   auto& provider{dynamic_cast<ThreeHalvesEvaluatorProvider&>(GetGarbledCircuitProvider())};
   provider.WaitSetup();
-  garbled_tables_msg_future_.wait(); }
+  garbled_tables_msg_future_.wait();
+}
 
 void AndGateEvaluator::EvaluateOnline() {
   auto& provider{dynamic_cast<ThreeHalvesEvaluatorProvider&>(GetGarbledCircuitProvider())};
