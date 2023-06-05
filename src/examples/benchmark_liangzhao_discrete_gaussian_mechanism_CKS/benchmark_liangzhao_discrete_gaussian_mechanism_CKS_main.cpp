@@ -103,7 +103,7 @@ std::vector<Combination> GenerateAllCombinations() {
 
   // double sigma = 1.3773;
 
-double sigma = 1.7773;
+  double sigma = 1.7773;
 
   if (benchmark_gc && num_of_parties == 2 && sigma < 1) {
     // ================================================
