@@ -101,7 +101,7 @@ std::vector<Combination> GenerateAllCombinations() {
   // only for debugging
   // double sigma = 1.5;  // ! overflow
 
-  double sigma = 1.4273;
+  double sigma = 1.3773;
 
   if (benchmark_gc && num_of_parties == 2 && sigma < 1) {
     // ================================================
