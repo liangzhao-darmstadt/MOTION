@@ -473,14 +473,14 @@ std::vector<Combination> GenerateAllCombinations() {
     //     failure_probability_pow2_neg_40);
 
     // ! overflow
-    combinations.emplace_back(
-        64, encrypto::motion::MpcProtocol::kBooleanGmw,
-        T::kDiscreteLaplaceMechanismCKS_FL64DiscreteLaplace_noise_generation_optimized,
-        batch_size, failure_probability_pow2_neg_40);
+    // combinations.emplace_back(
+    //     64, encrypto::motion::MpcProtocol::kBooleanGmw,
+    //     T::kDiscreteLaplaceMechanismCKS_FL64DiscreteLaplace_noise_generation_optimized,
+    //     batch_size, failure_probability_pow2_neg_40);
 
-    combinations.emplace_back(64, encrypto::motion::MpcProtocol::kBooleanGmw,
-                              T::kDiscreteLaplaceMechanismCKS_FL64DiscreteLaplace_perturbation,
-                              batch_size, failure_probability_pow2_neg_40);
+    // combinations.emplace_back(64, encrypto::motion::MpcProtocol::kBooleanGmw,
+    //                           T::kDiscreteLaplaceMechanismCKS_FL64DiscreteLaplace_perturbation,
+    //                           batch_size, failure_probability_pow2_neg_40);
     // ================================================
     // ! BooleanGMW
     // batch_size = 20;
