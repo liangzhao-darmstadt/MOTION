@@ -88,14 +88,14 @@ std::vector<Combination> GenerateAllCombinations() {
 
   std::size_t batch_size = 1;
 
-  // std::size_t num_of_parties = 2;
+  std::size_t num_of_parties = 2;
 
-  std::size_t num_of_parties = 3;
+  // std::size_t num_of_parties = 3;
 
-  // bool benchmark_gc = true; 
-  bool benchmark_gc = false;
-  bool benchmark_boolean_gmw = true;
-  // bool benchmark_boolean_gmw = false;
+  bool benchmark_gc = true; 
+  // bool benchmark_gc = false;
+  // bool benchmark_boolean_gmw = true;
+  bool benchmark_boolean_gmw = false;
 
   if (benchmark_gc && num_of_parties == 2) {
     // ================================================
@@ -456,7 +456,7 @@ std::vector<Combination> GenerateAllCombinations() {
     //     T::kDiscreteLaplaceMechanismCKS_FL32DiscreteLaplace_noise_generation_naive, batch_size,
     //     failure_probability_pow2_neg_40);
 
-    // no overflow (almost memory overflow)
+    // no overflow (almost memory overflow, memory swap)
     combinations.emplace_back(
         32, encrypto::motion::MpcProtocol::kBooleanGmw,
         T::kDiscreteLaplaceMechanismCKS_FL32DiscreteLaplace_noise_generation_optimized, batch_size,
