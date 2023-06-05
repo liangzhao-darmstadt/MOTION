@@ -67,7 +67,8 @@ std::vector<Combination> GenerateAllCombinations() {
   using T = encrypto::motion::DPMechanismType;
 
   const std::array kBitSizes = {64};
-  const std::array kNumbersOfSimd = {1, 10, 30, 40, 50, 90, 100, 1000};
+  // const std::array kNumbersOfSimd = {1, 10, 30, 40, 50, 90, 100, 1000};
+  const std::array kNumbersOfSimd = {1, 10, 30};
 
   // only for debugging purposes
   // const std::array kNumbersOfSimd = {30};
@@ -89,8 +90,8 @@ std::vector<Combination> GenerateAllCombinations() {
   };
 
   const std::array kProtocol = {
-      // encrypto::motion::MpcProtocol::kGarbledCircuit,  // only for two parties
-      encrypto::motion::MpcProtocol::kBooleanGmw, // for >= 2 parties
+      encrypto::motion::MpcProtocol::kGarbledCircuit,  // only for two parties
+      // encrypto::motion::MpcProtocol::kBooleanGmw, // for >= 2 parties
       // encrypto::motion::MpcProtocol::kBmr,  // too slow,
   };
 

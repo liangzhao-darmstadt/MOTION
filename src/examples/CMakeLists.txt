@@ -16,7 +16,7 @@
 # add_subdirectory(benchmark_liangzhao_floating_point_operation)
 # add_subdirectory(benchmark_liangzhao_fixed_point_operation)
 
-# add_subdirectory(benchmark_liangzhao_dp_mechanism_PrivaDA)
+add_subdirectory(benchmark_liangzhao_dp_mechanism_PrivaDA)
 # add_subdirectory(benchmark_liangzhao_gaussian_mechanism_CrypTen)
 # add_subdirectory(benchmark_liangzhao_snapping_mechanism)
 add_subdirectory(benchmark_liangzhao_discrete_laplace_mechanism_CKS)
