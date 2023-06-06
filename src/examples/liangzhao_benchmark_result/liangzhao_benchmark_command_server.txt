@@ -106,15 +106,19 @@ cd ~/MOTION/build/bin/
 
 ============================================================
 
-./benchmark_liangzhao_snapping_mechanism --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 5
+./benchmark_liangzhao_snapping_mechanism --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
 
-./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 5
+./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
 
 ============================================================
 
 
 
+./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
 
+./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+
+============================================================
 
 
 
