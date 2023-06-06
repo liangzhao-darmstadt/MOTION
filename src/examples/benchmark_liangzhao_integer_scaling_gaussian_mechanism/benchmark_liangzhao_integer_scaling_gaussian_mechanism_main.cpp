@@ -215,10 +215,10 @@ std::vector<Combination> GenerateAllCombinations() {
     //                           T::kIntegerScalingGaussianMechanism_FLGaussian_noise_generation_naive,
     //                           batch_size, failure_probability_pow2_neg_40);
 
-    combinations.emplace_back(
-        64, encrypto::motion::MpcProtocol::kGarbledCircuit,
-        T::kIntegerScalingGaussianMechanism_FLGaussian_noise_generation_optimized, batch_size,
-        failure_probability_pow2_neg_40);
+    // combinations.emplace_back(
+    //     64, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    //     T::kIntegerScalingGaussianMechanism_FLGaussian_noise_generation_optimized, batch_size,
+    //     failure_probability_pow2_neg_40);
 
     // combinations.emplace_back(64, encrypto::motion::MpcProtocol::kGarbledCircuit,
     //                           T::kIntegerScalingGaussianMechanism_FLGaussian_perturbation_naive,
