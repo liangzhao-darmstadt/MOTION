@@ -99,7 +99,7 @@ std::vector<Combination> GenerateAllCombinations() {
   if (benchmark_gc && num_of_parties == 2) {
     // ================================================
     // ! Garbled Circuit
-    batch_size = 1;
+    // batch_size = 1;
 
     // only for debugging purposes
     // batch_size =30;
@@ -109,19 +109,19 @@ std::vector<Combination> GenerateAllCombinations() {
     //                           T::kIntegerScalingGaussianMechanism_FLGaussian_noise_generation_naive,
     //                           batch_size, failure_probability_pow2_neg_40);
 
-    combinations.emplace_back(
-        64, encrypto::motion::MpcProtocol::kGarbledCircuit,
-        T::kIntegerScalingGaussianMechanism_FLGaussian_noise_generation_optimized, batch_size,
-        failure_probability_pow2_neg_40);
+    // combinations.emplace_back(
+    //     64, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    //     T::kIntegerScalingGaussianMechanism_FLGaussian_noise_generation_optimized, batch_size,
+    //     failure_probability_pow2_neg_40);
 
-    // no huge improvement
+    // // no huge improvement
+    // // combinations.emplace_back(64, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    // //                           T::kIntegerScalingGaussianMechanism_FLGaussian_perturbation_naive,
+    // //                           batch_size, failure_probability_pow2_neg_40);
+
     // combinations.emplace_back(64, encrypto::motion::MpcProtocol::kGarbledCircuit,
-    //                           T::kIntegerScalingGaussianMechanism_FLGaussian_perturbation_naive,
+    //                           T::kIntegerScalingGaussianMechanism_FLGaussian_perturbation_optimized,
     //                           batch_size, failure_probability_pow2_neg_40);
-
-    combinations.emplace_back(64, encrypto::motion::MpcProtocol::kGarbledCircuit,
-                              T::kIntegerScalingGaussianMechanism_FLGaussian_perturbation_optimized,
-                              batch_size, failure_probability_pow2_neg_40);
 
     // ================================================
     // // ! Garbled Circuit
@@ -187,25 +187,25 @@ std::vector<Combination> GenerateAllCombinations() {
     //                           batch_size, failure_probability_pow2_neg_40);
 
     // ================================================
-    // ! Garbled Circuit
-    batch_size = 10;
+    // // ! Garbled Circuit
+    // batch_size = 10;
+
+    // // combinations.emplace_back(64, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    // //                           T::kIntegerScalingGaussianMechanism_FLGaussian_noise_generation_naive,
+    // //                           batch_size, failure_probability_pow2_neg_40);
+
+    // combinations.emplace_back(
+    //     64, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    //     T::kIntegerScalingGaussianMechanism_FLGaussian_noise_generation_optimized, batch_size,
+    //     failure_probability_pow2_neg_40);
+
+    // // combinations.emplace_back(64, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    // //                           T::kIntegerScalingGaussianMechanism_FLGaussian_perturbation_naive,
+    // //                           batch_size, failure_probability_pow2_neg_40);
 
     // combinations.emplace_back(64, encrypto::motion::MpcProtocol::kGarbledCircuit,
-    //                           T::kIntegerScalingGaussianMechanism_FLGaussian_noise_generation_naive,
+    //                           T::kIntegerScalingGaussianMechanism_FLGaussian_perturbation_optimized,
     //                           batch_size, failure_probability_pow2_neg_40);
-
-    combinations.emplace_back(
-        64, encrypto::motion::MpcProtocol::kGarbledCircuit,
-        T::kIntegerScalingGaussianMechanism_FLGaussian_noise_generation_optimized, batch_size,
-        failure_probability_pow2_neg_40);
-
-    // combinations.emplace_back(64, encrypto::motion::MpcProtocol::kGarbledCircuit,
-    //                           T::kIntegerScalingGaussianMechanism_FLGaussian_perturbation_naive,
-    //                           batch_size, failure_probability_pow2_neg_40);
-
-    combinations.emplace_back(64, encrypto::motion::MpcProtocol::kGarbledCircuit,
-                              T::kIntegerScalingGaussianMechanism_FLGaussian_perturbation_optimized,
-                              batch_size, failure_probability_pow2_neg_40);
 
     // ================================================
     // ! Garbled Circuit
