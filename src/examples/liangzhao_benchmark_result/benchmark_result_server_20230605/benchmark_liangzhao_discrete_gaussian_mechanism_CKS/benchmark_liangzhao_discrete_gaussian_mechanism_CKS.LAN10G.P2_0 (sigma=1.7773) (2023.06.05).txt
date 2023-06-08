@@ -1,0 +1,1161 @@
+lzhao@simx2 ~/MOTION_liangzhao_WAN_test/MOTION/build/bin $ ./benchmark_liangzhao_discrete_gaussian_mechanism_CKS --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 5
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_naive
+assert(t_ != 1);
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_naive
+assert(t_ != 1);
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_naive
+assert(t_ != 1);
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_naive
+assert(t_ != 1);
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_naive
+assert(t_ != 1);
+===========================================================================
+Protocol GarbledCircuit operation kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_noise_generation_naive bit size 32 SIMD 1
+===========================================================================
+MOTION version: c20bb860-dirty @ dev
+invocation: ./benchmark_liangzhao_discrete_gaussian_mechanism_CKS --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 5
+by lzhao@simx2, PID 109531
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup            183.613 ms    182.452 ms      2.870 ms
+MT Setup               407.583 ms    407.881 ms      1.965 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    2123.386 ms   2133.985 ms     89.651 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   2784.689 ms   2775.481 ms     86.401 ms
+Gates Setup          28232.977 ms  28099.700 ms   1584.463 ms
+Gates Online          1322.121 ms   1343.446 ms    253.541 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   32345.862 ms  31978.956 ms   1452.535 ms
+===========================================================================
+Communication with each other party:
+Sent: 6011.416 MiB in 63448 messages
+Received: 180.445 MiB in 2706 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_optimized
+===========================================================================
+Protocol GarbledCircuit operation kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_noise_generation_optimized bit size 32 SIMD 1
+===========================================================================
+MOTION version: c20bb860-dirty @ dev
+invocation: ./benchmark_liangzhao_discrete_gaussian_mechanism_CKS --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 5
+by lzhao@simx2, PID 109531
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup            180.152 ms    181.225 ms      2.972 ms
+MT Setup               444.998 ms    408.808 ms     68.576 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    1902.277 ms   1955.134 ms    203.857 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   2589.928 ms   2622.456 ms    158.199 ms
+Gates Setup           3055.395 ms   3124.895 ms    769.100 ms
+Gates Online           927.022 ms    490.296 ms    700.951 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    6580.460 ms   6218.139 ms    655.514 ms
+===========================================================================
+Communication with each other party:
+Sent: 2921.546 MiB in 44304 messages
+Received: 173.749 MiB in 2706 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+===========================================================================
+Protocol GarbledCircuit operation kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_perturbation bit size 32 SIMD 1
+===========================================================================
+MOTION version: c20bb860-dirty @ dev
+invocation: ./benchmark_liangzhao_discrete_gaussian_mechanism_CKS --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 5
+by lzhao@simx2, PID 109531
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total      3.557 ms      3.441 ms      0.306 ms
+Gates Setup             36.719 ms     10.053 ms     51.167 ms
+Gates Online             0.283 ms      0.238 ms      0.111 ms
+---------------------------------------------------------------------------
+Circuit Evaluation      82.253 ms     42.796 ms     81.182 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.007 MiB in 70 messages
+Received: 0.000 MiB in 4 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL64DiscreteGaussianNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL64DiscreteGaussianNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL64DiscreteGaussianNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL64DiscreteGaussianNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL64DiscreteGaussianNoiseGeneration_naive
+===========================================================================
+Protocol GarbledCircuit operation kDiscreteGaussianMechanismCKS_FL64DiscreteGaussian_noise_generation_naive bit size 64 SIMD 1
+===========================================================================
+MOTION version: c20bb860-dirty @ dev
+invocation: ./benchmark_liangzhao_discrete_gaussian_mechanism_CKS --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 5
+by lzhao@simx2, PID 109531
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup           1786.724 ms   1788.369 ms      6.671 ms
+MT Setup              4325.288 ms   4328.021 ms     13.894 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup   20891.255 ms  20945.954 ms    177.815 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total  27133.934 ms  27113.392 ms    238.314 ms
+Gates Setup          39954.992 ms  38103.541 ms   6722.600 ms
+Gates Online          1568.889 ms   1157.843 ms    918.997 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   68667.904 ms  66595.675 ms   6097.867 ms
+===========================================================================
+Communication with each other party:
+Sent: 13820.660 MiB in 170449 messages
+Received: 1723.920 MiB in 25102 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL64DiscreteGaussianNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL64DiscreteGaussianNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL64DiscreteGaussianNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL64DiscreteGaussianNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+SecureDiscreteGaussianMechanismCKS::FL64DiscreteGaussianNoiseGeneration_optimized
+===========================================================================
+Protocol GarbledCircuit operation kDiscreteGaussianMechanismCKS_FL64DiscreteGaussian_noise_generation_optimized bit size 64 SIMD 1
+===========================================================================
+MOTION version: c20bb860-dirty @ dev
+invocation: ./benchmark_liangzhao_discrete_gaussian_mechanism_CKS --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 5
+by lzhao@simx2, PID 109531
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup           1777.763 ms   1778.761 ms     12.870 ms
+MT Setup              4347.238 ms   4346.685 ms     30.440 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup   20041.527 ms  19946.901 ms    328.373 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total  26251.143 ms  26167.596 ms    347.294 ms
+Gates Setup          11935.525 ms  13085.250 ms   2458.075 ms
+Gates Online          1572.052 ms   1644.393 ms    609.570 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   39767.544 ms  40293.301 ms   2031.176 ms
+===========================================================================
+Communication with each other party:
+Sent: 9248.563 MiB in 142011 messages
+Received: 1717.224 MiB in 25102 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 1
+num_of_simd_total_: 378
+===========================================================================
+Protocol GarbledCircuit operation kDiscreteGaussianMechanismCKS_FL64DiscreteGaussian_perturbation bit size 64 SIMD 1
+===========================================================================
+MOTION version: c20bb860-dirty @ dev
+invocation: ./benchmark_liangzhao_discrete_gaussian_mechanism_CKS --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 5
+by lzhao@simx2, PID 109531
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total      5.399 ms      3.389 ms      4.029 ms
+Gates Setup            161.897 ms     24.464 ms    235.790 ms
+Gates Online             2.312 ms      0.387 ms      3.873 ms
+---------------------------------------------------------------------------
+Circuit Evaluation     383.303 ms    230.193 ms    378.383 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.007 MiB in 70 messages
+Received: 0.000 MiB in 4 messages
+===========================================================================
+
+lzhao@simx2 ~/MOTION_liangzhao_WAN_test/MOTION/build/bin $ ./benchmark_liangzhao_discrete_gaussian_mechanism_CKS --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 5
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 5
+num_of_simd_total_: 1890
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 5
+num_of_simd_total_: 1890
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 5
+num_of_simd_total_: 1890
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 5
+num_of_simd_total_: 1890
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 5
+num_of_simd_total_: 1890
+SecureDiscreteGaussianMechanismCKS::FL32DiscreteGaussianNoiseGeneration_optimized
+===========================================================================
+Protocol GarbledCircuit operation kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_noise_generation_optimized bit size 32 SIMD 5
+===========================================================================
+MOTION version: bd323af1-dirty @ dev
+invocation: ./benchmark_liangzhao_discrete_gaussian_mechanism_CKS --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 5
+by lzhao@simx2, PID 110972
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup            904.738 ms    904.511 ms      3.784 ms
+MT Setup              2014.546 ms   2020.431 ms     13.260 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup   10174.324 ms  10218.675 ms    121.377 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total  13180.629 ms  13225.683 ms    118.616 ms
+Gates Setup           6946.805 ms   6329.336 ms   1089.318 ms
+Gates Online          8506.511 ms   8531.722 ms    542.728 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   28639.612 ms  28125.270 ms   1277.584 ms
+===========================================================================
+Communication with each other party:
+Sent: 14598.287 MiB in 44304 messages
+Received: 868.178 MiB in 2706 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 5
+num_of_simd_total_: 1890
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 5
+num_of_simd_total_: 1890
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 5
+num_of_simd_total_: 1890
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 5
+num_of_simd_total_: 1890
+failure_probability: 9.09495e-13
+SecureDiscreteGaussianMechanismCKS::ParameterSetup
+sigma: 1.7773
+numerator: 1
+denominator: 2
+numerator_: 1
+denominator_: 2
+log2_denominator_: 1
+discrete_gaussian_best_iteration_1: 18
+discrete_gaussian_best_iteration_2: 28
+discrete_gaussian_best_iteration_3: 18
+discrete_gaussian_best_iteration_4: 21
+minimum_total_iteration_: 17388
+minimum_total_MPC_time_: 99608.9
+geometric_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+discrete_laplace_failure_probability_estimation_: 1.9492e-13
+upscale_factor_: 1
+num_of_simd_geo_: 18
+num_of_simd_dlap_: 21
+num_of_simd_dgau_: 5
+num_of_simd_total_: 1890
+===========================================================================
+Protocol GarbledCircuit operation kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_perturbation bit size 32 SIMD 5
+===========================================================================
+MOTION version: bd323af1-dirty @ dev
+invocation: ./benchmark_liangzhao_discrete_gaussian_mechanism_CKS --my-id 0 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 5
+by lzhao@simx2, PID 110972
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total      3.730 ms      3.700 ms      0.048 ms
+Gates Setup            101.617 ms    102.480 ms     78.905 ms
+Gates Online             6.568 ms      0.282 ms     12.591 ms
+---------------------------------------------------------------------------
+Circuit Evaluation     305.488 ms    219.142 ms    222.107 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.021 MiB in 70 messages
+Received: 0.000 MiB in 4 messages
+===========================================================================

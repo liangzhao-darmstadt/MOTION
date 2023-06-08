@@ -1,0 +1,559 @@
+lzhao@simx3 ~/MOTION_liangzhao_WAN_test/MOTION/build/bin $ ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_noise_generation_naive bit size 64 SIMD 1
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.232 ms      0.245 ms      0.140 ms
+MT Setup               116.892 ms    103.738 ms     43.811 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     310.909 ms    308.533 ms     36.010 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    903.592 ms    891.335 ms     32.990 ms
+Gates Setup           2317.469 ms   2316.995 ms    208.198 ms
+Gates Online          2501.911 ms   2532.655 ms    101.332 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    5735.868 ms   5666.107 ms    236.838 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.737 MiB in 12746 messages
+Received: 4.940 MiB in 70657 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_noise_generation_optimized bit size 64 SIMD 1
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.121 ms      0.114 ms      0.058 ms
+MT Setup               127.959 ms    103.251 ms     52.094 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     298.031 ms    313.141 ms     41.122 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    891.354 ms    872.596 ms     40.089 ms
+Gates Setup           1897.839 ms   1876.370 ms    163.516 ms
+Gates Online          2465.979 ms   2466.773 ms     73.625 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    5266.438 ms   5291.013 ms    142.031 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.737 MiB in 12746 messages
+Received: 4.137 MiB in 59588 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_perturbation_naive bit size 64 SIMD 1
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    306.524 ms    306.146 ms      6.483 ms
+Gates Setup           1561.746 ms   1422.594 ms    203.371 ms
+Gates Online           311.739 ms    313.839 ms     54.693 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    2186.979 ms   2073.528 ms    185.090 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.000 MiB in 4 messages
+Received: 2.897 MiB in 39854 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_perturbation_optimized bit size 64 SIMD 1
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    276.354 ms    273.310 ms      9.513 ms
+Gates Setup            474.001 ms    483.612 ms     27.927 ms
+Gates Online            56.313 ms     57.325 ms      5.537 ms
+---------------------------------------------------------------------------
+Circuit Evaluation     812.206 ms    819.152 ms     24.672 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.000 MiB in 4 messages
+Received: 0.460 MiB in 6205 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_rounding_naive bit size 64 SIMD 1
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    307.283 ms    305.130 ms      6.962 ms
+Gates Setup           1265.028 ms   1273.168 ms     73.216 ms
+Gates Online           241.054 ms    231.902 ms     40.176 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1818.836 ms   1855.611 ms    106.342 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.000 MiB in 4 messages
+Received: 2.514 MiB in 34631 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_rounding_optimized bit size 64 SIMD 1
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    261.831 ms    260.731 ms      7.756 ms
+Gates Setup            208.406 ms    212.035 ms      7.392 ms
+Gates Online            24.100 ms     22.641 ms      3.023 ms
+---------------------------------------------------------------------------
+Circuit Evaluation     500.526 ms    502.930 ms      7.054 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.000 MiB in 4 messages
+Received: 0.076 MiB in 982 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_noise_generation_naive bit size 64 SIMD 10
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.972 ms      0.657 ms      0.892 ms
+MT Setup               110.846 ms    103.517 ms     25.488 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     648.361 ms    646.748 ms     38.056 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1220.638 ms   1214.947 ms     22.498 ms
+Gates Setup           2345.705 ms   2457.152 ms    197.224 ms
+Gates Online          2506.415 ms   2512.147 ms     39.593 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    6078.136 ms   6098.657 ms    187.632 ms
+===========================================================================
+Communication with each other party:
+Sent: 1.607 MiB in 12746 messages
+Received: 18.233 MiB in 70657 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_noise_generation_optimized bit size 64 SIMD 10
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.670 ms      0.649 ms      0.087 ms
+MT Setup               154.287 ms    150.199 ms     45.096 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     609.672 ms    628.520 ms     40.069 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1240.071 ms   1238.236 ms     30.192 ms
+Gates Setup           1669.971 ms   1677.745 ms    152.245 ms
+Gates Online          2393.783 ms   2344.072 ms    133.396 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    5309.973 ms   5316.668 ms    252.890 ms
+===========================================================================
+Communication with each other party:
+Sent: 1.607 MiB in 12746 messages
+Received: 15.056 MiB in 59588 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_perturbation_naive bit size 64 SIMD 10
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    298.025 ms    293.442 ms      7.906 ms
+Gates Setup           1578.683 ms   1541.730 ms    107.950 ms
+Gates Online           301.137 ms    306.545 ms     52.306 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    2181.692 ms   2156.509 ms     83.196 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.000 MiB in 4 messages
+Received: 11.488 MiB in 39854 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_perturbation_optimized bit size 64 SIMD 10
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    281.277 ms    280.704 ms     10.262 ms
+Gates Setup            667.995 ms    657.730 ms     18.295 ms
+Gates Online            61.214 ms     59.387 ms      8.955 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1015.501 ms   1020.835 ms     15.232 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.000 MiB in 4 messages
+Received: 1.875 MiB in 6205 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_rounding_naive bit size 64 SIMD 10
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    303.557 ms    302.223 ms      6.656 ms
+Gates Setup           1401.413 ms   1400.924 ms      8.937 ms
+Gates Online           280.209 ms    263.988 ms     46.129 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1989.848 ms   1977.440 ms     52.683 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.000 MiB in 4 messages
+Received: 9.945 MiB in 34631 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_rounding_optimized bit size 64 SIMD 10
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    262.765 ms    262.203 ms      6.140 ms
+Gates Setup            398.713 ms    396.965 ms      5.079 ms
+Gates Online            26.514 ms     25.519 ms      3.389 ms
+---------------------------------------------------------------------------
+Circuit Evaluation     693.317 ms    693.660 ms      6.030 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.000 MiB in 4 messages
+Received: 0.333 MiB in 982 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_noise_generation_naive bit size 64 SIMD 30
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              2.355 ms      1.911 ms      1.289 ms
+MT Setup               172.081 ms    200.342 ms     69.051 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     910.130 ms    908.855 ms     40.885 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1538.689 ms   1531.480 ms     35.349 ms
+Gates Setup           3966.926 ms   3965.128 ms    165.648 ms
+Gates Online          2479.483 ms   2522.254 ms     77.931 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    7990.296 ms   7983.093 ms    201.228 ms
+===========================================================================
+Communication with each other party:
+Sent: 3.542 MiB in 12746 messages
+Received: 47.233 MiB in 70657 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_noise_generation_optimized bit size 64 SIMD 30
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              1.959 ms      1.931 ms      0.239 ms
+MT Setup               191.181 ms    172.457 ms    146.568 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     909.932 ms    915.441 ms     72.363 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1587.985 ms   1554.723 ms    107.655 ms
+Gates Setup           3220.371 ms   3240.739 ms    108.541 ms
+Gates Online          2432.220 ms   2425.733 ms     59.396 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    7245.814 ms   7239.241 ms    115.810 ms
+===========================================================================
+Communication with each other party:
+Sent: 3.542 MiB in 12746 messages
+Received: 38.886 MiB in 59588 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_perturbation_naive bit size 64 SIMD 30
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    303.514 ms    303.052 ms      7.597 ms
+Gates Setup           3162.814 ms   3160.185 ms     10.837 ms
+Gates Online           342.414 ms    314.988 ms     59.884 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    3813.921 ms   3777.089 ms     56.822 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.000 MiB in 4 messages
+Received: 30.207 MiB in 39854 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_perturbation_optimized bit size 64 SIMD 30
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    277.222 ms    273.540 ms     11.411 ms
+Gates Setup            937.519 ms    938.288 ms      9.388 ms
+Gates Online            66.833 ms     67.397 ms      4.786 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1286.559 ms   1278.874 ms     14.491 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.000 MiB in 4 messages
+Received: 4.963 MiB in 6205 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_rounding_naive bit size 64 SIMD 30
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    305.353 ms    303.471 ms     13.540 ms
+Gates Setup           2813.979 ms   2809.586 ms     10.257 ms
+Gates Online           280.320 ms    276.975 ms     33.044 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    3403.394 ms   3400.543 ms     31.820 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.000 MiB in 4 messages
+Received: 26.136 MiB in 34631 messages
+===========================================================================
+===========================================================================
+Protocol GarbledCircuit operation kSnappingMechanism_rounding_optimized bit size 64 SIMD 30
+===========================================================================
+MOTION version: 7a91b1ec-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.166,23000 1,130.83.125.167,23000 --repetitions 10
+by lzhao@simx3, PID 50027
+===========================================================================
+Run time statistics over 10 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.000 ms      0.000 ms      0.000 ms
+MT Setup                 0.000 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       0.000 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    259.440 ms    261.010 ms     10.213 ms
+Gates Setup            531.650 ms    520.156 ms     29.421 ms
+Gates Online            62.905 ms     71.202 ms     16.913 ms
+---------------------------------------------------------------------------
+Circuit Evaluation     859.348 ms    864.134 ms     15.557 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.000 MiB in 4 messages
+Received: 0.893 MiB in 982 messages
+===========================================================================

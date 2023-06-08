@@ -1,0 +1,745 @@
+lzhao@simx1 ~/MOTION_liangzhao_WAN_test/MOTION/build/bin $ ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL32Laplace_noise_generation bit size 64 SIMD 1
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              2.705 ms      2.991 ms      0.229 ms
+MT Setup                93.389 ms     86.773 ms      4.690 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     510.815 ms    513.870 ms     10.836 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1023.331 ms   1020.730 ms     15.819 ms
+Gates Setup             19.194 ms     16.751 ms      1.836 ms
+Gates Online         50405.154 ms  50258.554 ms    372.305 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   51460.054 ms  51306.903 ms    387.721 ms
+===========================================================================
+Communication with each other party:
+Sent: 2.142 MiB in 37284 messages
+Received: 2.142 MiB in 37284 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL64Laplace_noise_generation bit size 64 SIMD 1
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              7.389 ms      9.462 ms      1.482 ms
+MT Setup               100.752 ms     97.023 ms      2.903 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     742.404 ms    747.783 ms     20.142 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1287.746 ms   1289.584 ms     19.597 ms
+Gates Setup             72.696 ms     73.442 ms      7.755 ms
+Gates Online        333316.472 ms 335410.345 ms   1600.097 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  334686.927 ms 336781.981 ms   1611.399 ms
+===========================================================================
+Communication with each other party:
+Sent: 9.422 MiB in 164252 messages
+Received: 9.422 MiB in 164252 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL32Laplace_perturbation bit size 64 SIMD 1
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.084 ms      0.086 ms      0.004 ms
+MT Setup               135.575 ms    189.626 ms     41.076 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     199.512 ms    231.988 ms     26.739 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    810.996 ms    875.462 ms     46.029 ms
+Gates Setup              2.215 ms      1.923 ms      0.536 ms
+Gates Online          6025.689 ms   5994.380 ms    143.704 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    6859.724 ms   6897.790 ms    157.272 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.240 MiB in 4104 messages
+Received: 0.240 MiB in 4104 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL64Laplace_perturbation bit size 64 SIMD 1
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.185 ms      0.181 ms      0.007 ms
+MT Setup                90.309 ms     97.309 ms     10.712 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     281.360 ms    316.670 ms     48.904 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    854.961 ms    865.448 ms     15.435 ms
+Gates Setup              3.834 ms      3.396 ms      0.447 ms
+Gates Online          6416.882 ms   6434.866 ms     48.500 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    7288.194 ms   7311.989 ms     39.788 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.527 MiB in 9116 messages
+Received: 0.527 MiB in 9116 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL32DiscreteLaplace_noise_generation bit size 64 SIMD 1
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              1.751 ms      0.868 ms      1.065 ms
+MT Setup               120.082 ms    101.486 ms     26.163 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     549.895 ms    540.253 ms     40.669 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1137.858 ms   1076.138 ms     49.188 ms
+Gates Setup             15.748 ms     14.847 ms      2.275 ms
+Gates Online         23763.430 ms  23522.464 ms    192.366 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   24925.520 ms  24624.499 ms    238.979 ms
+===========================================================================
+Communication with each other party:
+Sent: 2.110 MiB in 32746 messages
+Received: 2.110 MiB in 32746 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL64DiscreteLaplace_noise_generation bit size 64 SIMD 1
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              8.220 ms      8.986 ms      0.829 ms
+MT Setup               155.714 ms    175.277 ms     14.154 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     830.454 ms    760.046 ms     49.890 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1473.014 ms   1496.268 ms     19.611 ms
+Gates Setup             61.728 ms     60.772 ms      1.112 ms
+Gates Online        229780.118 ms 229652.770 ms    665.049 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  231322.444 ms 231217.502 ms    653.463 ms
+===========================================================================
+Communication with each other party:
+Sent: 8.307 MiB in 130654 messages
+Received: 8.307 MiB in 130654 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL32DiscreteLaplace_perturbation bit size 64 SIMD 1
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.102 ms      0.106 ms      0.003 ms
+MT Setup               114.767 ms     99.172 ms     22.083 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     162.488 ms    139.410 ms     66.359 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    785.915 ms    743.308 ms     42.332 ms
+Gates Setup              0.228 ms      0.176 ms      0.104 ms
+Gates Online           613.400 ms    615.080 ms     53.793 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1430.708 ms   1373.037 ms     86.067 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.045 MiB in 708 messages
+Received: 0.045 MiB in 708 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL64DiscreteLaplace_perturbation bit size 64 SIMD 1
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.031 ms      0.031 ms      0.001 ms
+MT Setup               166.189 ms    103.704 ms     55.279 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     148.643 ms    155.175 ms     39.039 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    824.288 ms    803.632 ms     18.860 ms
+Gates Setup              0.518 ms      0.484 ms      0.032 ms
+Gates Online           527.377 ms    517.962 ms     22.657 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1362.249 ms   1329.371 ms     26.933 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.071 MiB in 1156 messages
+Received: 0.071 MiB in 1156 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL32Laplace_noise_generation bit size 64 SIMD 10
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             12.997 ms     14.455 ms      5.958 ms
+MT Setup                86.178 ms    214.073 ms     90.436 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    1401.508 ms   1067.735 ms    312.413 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1932.097 ms   1715.134 ms    257.480 ms
+Gates Setup             19.607 ms     23.909 ms      3.889 ms
+Gates Online         51158.145 ms  51511.164 ms    389.652 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   53118.976 ms  53261.389 ms    514.549 ms
+===========================================================================
+Communication with each other party:
+Sent: 4.714 MiB in 37284 messages
+Received: 4.714 MiB in 37284 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL64Laplace_noise_generation bit size 64 SIMD 10
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             34.032 ms     32.593 ms      2.322 ms
+MT Setup               533.852 ms    768.125 ms    311.216 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    3001.167 ms   2823.873 ms    125.541 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   4010.452 ms   4094.000 ms    271.824 ms
+Gates Setup             68.929 ms     72.210 ms      7.238 ms
+Gates Online        334991.772 ms 335024.240 ms   2056.609 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  339082.332 ms 339207.539 ms   1786.054 ms
+===========================================================================
+Communication with each other party:
+Sent: 20.838 MiB in 164252 messages
+Received: 20.838 MiB in 164252 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL32Laplace_perturbation bit size 64 SIMD 10
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.970 ms      0.888 ms      0.205 ms
+MT Setup               139.855 ms    106.546 ms     49.378 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     445.941 ms    469.586 ms     36.055 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1080.605 ms   1058.750 ms     44.489 ms
+Gates Setup              2.364 ms      2.118 ms      0.372 ms
+Gates Online          5832.258 ms   5975.029 ms    101.009 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    6969.975 ms   7042.345 ms     92.103 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.499 MiB in 4104 messages
+Received: 0.499 MiB in 4104 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL64Laplace_perturbation bit size 64 SIMD 10
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              1.828 ms      1.829 ms      0.146 ms
+MT Setup               171.950 ms    102.925 ms     49.109 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     591.373 ms    580.162 ms     11.063 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1220.404 ms   1136.950 ms     60.846 ms
+Gates Setup              3.807 ms      3.920 ms      0.178 ms
+Gates Online          6307.571 ms   6283.771 ms     31.147 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    7539.969 ms   7432.534 ms     77.057 ms
+===========================================================================
+Communication with each other party:
+Sent: 1.136 MiB in 9116 messages
+Received: 1.136 MiB in 9116 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL32DiscreteLaplace_noise_generation bit size 64 SIMD 10
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             16.972 ms      7.793 ms     12.155 ms
+MT Setup               380.371 ms    426.583 ms    262.262 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    1436.996 ms   1440.937 ms    117.264 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   2297.159 ms   2319.898 ms    154.969 ms
+Gates Setup             16.467 ms     18.369 ms      1.610 ms
+Gates Online         23769.968 ms  23920.790 ms    169.976 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   26090.394 ms  26266.019 ms    125.892 ms
+===========================================================================
+Communication with each other party:
+Sent: 6.407 MiB in 32746 messages
+Received: 6.407 MiB in 32746 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL64DiscreteLaplace_noise_generation bit size 64 SIMD 10
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             46.650 ms     51.228 ms      3.501 ms
+MT Setup              1839.780 ms   3262.847 ms   1034.288 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    3694.344 ms   2900.145 ms    618.799 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   6028.215 ms   6678.895 ms    460.171 ms
+Gates Setup             63.081 ms     74.318 ms     10.454 ms
+Gates Online        228263.254 ms 229818.054 ms   1547.416 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  234360.833 ms 236577.935 ms   1909.144 ms
+===========================================================================
+Communication with each other party:
+Sent: 24.691 MiB in 130654 messages
+Received: 24.691 MiB in 130654 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL32DiscreteLaplace_perturbation bit size 64 SIMD 10
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.167 ms      0.154 ms      0.015 ms
+MT Setup               122.739 ms    164.827 ms     38.938 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     205.374 ms    233.541 ms     37.945 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    814.694 ms    859.484 ms     32.461 ms
+Gates Setup              0.249 ms      0.211 ms      0.049 ms
+Gates Online           637.399 ms    497.233 ms    113.434 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1493.018 ms   1365.199 ms     93.461 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.068 MiB in 708 messages
+Received: 0.068 MiB in 708 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL64DiscreteLaplace_perturbation bit size 64 SIMD 10
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.178 ms      0.174 ms      0.010 ms
+MT Setup               143.874 ms    184.266 ms     31.098 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     281.953 ms    317.916 ms     27.580 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    940.986 ms    986.018 ms     32.274 ms
+Gates Setup              0.474 ms      0.438 ms      0.035 ms
+Gates Online           551.411 ms    516.679 ms     38.271 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1502.175 ms   1516.190 ms     25.621 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.125 MiB in 1156 messages
+Received: 0.125 MiB in 1156 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL32Laplace_noise_generation bit size 64 SIMD 30
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             13.538 ms     11.094 ms      1.793 ms
+MT Setup               259.988 ms    583.109 ms    230.388 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    2413.163 ms   1976.867 ms    347.572 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   3112.494 ms   3020.573 ms    142.193 ms
+Gates Setup             14.942 ms     17.615 ms      1.933 ms
+Gates Online         50887.279 ms  50792.138 ms     69.652 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   54021.809 ms  53835.300 ms    169.034 ms
+===========================================================================
+Communication with each other party:
+Sent: 10.428 MiB in 37284 messages
+Received: 10.428 MiB in 37284 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL64Laplace_noise_generation bit size 64 SIMD 30
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             90.808 ms     86.593 ms      4.580 ms
+MT Setup              3547.785 ms   3024.441 ms    512.026 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    6582.209 ms   7142.821 ms    477.779 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total  10602.842 ms  10666.703 ms     93.860 ms
+Gates Setup             63.992 ms     68.358 ms      3.096 ms
+Gates Online        334930.057 ms 331779.531 ms   2373.439 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  345603.976 ms 342521.921 ms   2300.408 ms
+===========================================================================
+Communication with each other party:
+Sent: 46.208 MiB in 164252 messages
+Received: 46.208 MiB in 164252 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL32Laplace_perturbation bit size 64 SIMD 30
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              2.406 ms      2.443 ms      0.041 ms
+MT Setup               171.063 ms    231.975 ms     64.975 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     648.436 ms    571.316 ms     54.587 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1318.887 ms   1322.095 ms     56.649 ms
+Gates Setup              2.499 ms      2.109 ms      0.541 ms
+Gates Online          5850.331 ms   5693.999 ms    132.963 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    7221.365 ms   7039.865 ms    128.345 ms
+===========================================================================
+Communication with each other party:
+Sent: 1.073 MiB in 4104 messages
+Received: 1.073 MiB in 4104 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL64Laplace_perturbation bit size 64 SIMD 30
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              5.147 ms      4.854 ms      0.399 ms
+MT Setup               192.565 ms    317.354 ms     92.356 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     856.876 ms    772.103 ms     60.991 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1522.175 ms   1550.685 ms     35.866 ms
+Gates Setup              4.431 ms      4.040 ms      0.300 ms
+Gates Online          6360.980 ms   6211.690 ms    119.391 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    7895.148 ms   7773.078 ms     90.300 ms
+===========================================================================
+Communication with each other party:
+Sent: 2.486 MiB in 9116 messages
+Received: 2.486 MiB in 9116 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL32DiscreteLaplace_noise_generation bit size 64 SIMD 30
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             27.981 ms     22.285 ms      4.341 ms
+MT Setup                99.332 ms     96.815 ms      4.814 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    4636.439 ms   3995.379 ms    722.023 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   5216.068 ms   4563.382 ms    717.603 ms
+Gates Setup             17.231 ms     19.100 ms      3.222 ms
+Gates Online         23444.654 ms  23278.894 ms    162.963 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   28682.109 ms  27865.800 ms    877.058 ms
+===========================================================================
+Communication with each other party:
+Sent: 16.181 MiB in 32746 messages
+Received: 16.181 MiB in 32746 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL64DiscreteLaplace_noise_generation bit size 64 SIMD 30
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup            154.179 ms    169.046 ms     21.578 ms
+MT Setup              4528.260 ms   5963.607 ms   1976.972 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    9083.154 ms   8031.944 ms   1868.503 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total  14114.782 ms  14503.008 ms    277.062 ms
+Gates Setup             50.263 ms     54.299 ms      2.915 ms
+Gates Online        223317.874 ms 222275.061 ms   1079.619 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  237488.107 ms 236837.116 ms    880.526 ms
+===========================================================================
+Communication with each other party:
+Sent: 61.896 MiB in 130654 messages
+Received: 61.896 MiB in 130654 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL32DiscreteLaplace_perturbation bit size 64 SIMD 30
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.276 ms      0.288 ms      0.027 ms
+MT Setup               170.912 ms    138.644 ms     27.196 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     228.215 ms    244.140 ms     11.721 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    925.570 ms    907.122 ms     13.142 ms
+Gates Setup              0.199 ms      0.189 ms      0.009 ms
+Gates Online           562.665 ms    555.925 ms     26.305 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1549.781 ms   1470.227 ms     81.287 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.117 MiB in 708 messages
+Received: 0.117 MiB in 708 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kDPMechanism_PrivaDA_FL64DiscreteLaplace_perturbation bit size 64 SIMD 30
+===========================================================================
+MOTION version: 1ff19404-dirty @ dev
+invocation: ./benchmark_liangzhao_dp_mechanism_PrivaDA --my-id 0 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx1, PID 103229
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.492 ms      0.491 ms      0.006 ms
+MT Setup               164.816 ms    101.932 ms     44.617 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     386.121 ms    419.472 ms     41.213 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1055.389 ms   1007.453 ms     34.025 ms
+Gates Setup              0.609 ms      0.473 ms      0.165 ms
+Gates Online           524.065 ms    526.604 ms      6.686 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1588.725 ms   1542.158 ms     33.363 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.244 MiB in 1156 messages
+Received: 0.244 MiB in 1156 messages
+===========================================================================

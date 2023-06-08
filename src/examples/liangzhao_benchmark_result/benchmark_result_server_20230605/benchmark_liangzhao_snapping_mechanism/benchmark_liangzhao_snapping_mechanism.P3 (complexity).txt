@@ -1,0 +1,247 @@
+liangzhao@ubuntu22:/media/liangzhao/d5c709c3-5e6f-4fa2-b422-007a6f243cda/test_liangzhao_darmstadt_complexity/MOTION_complexity/build/bin$  ./benchmark_liangzhao_snapping_mechanism --my-id 2 --parties 0,127.0.0.1,23000 1,127.0.0.1,23001 2,127.0.0.1,23002
+
+GateExecutor: After gate setup
+num_of_boolean_gmw_and_gate: 61917
+num_of_boolean_gmw_mux_gate: 2164
+max_depth_of_boolean_gmw_and_gate_before: 1967
+max_depth_of_boolean_gmw_mux_gate_before: 74
+max_depth_of_boolean_gmw_and_mux_gate_before: 2009
+num_of_garbled_circuit_and_gate: 0
+num_of_bmr_and_gate: 0
+
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_noise_generation_naive bit size 64 SIMD 1
+===========================================================================
+MOTION version: c2bb7699-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 2 --parties 0,127.0.0.1,23000 1,127.0.0.1,23001 2,127.0.0.1,23002
+by liangzhao@ubuntu22, PID 125887
+===========================================================================
+Run time statistics over 1 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             21.910 ms      0.000 ms      0.000 ms
+MT Setup                34.131 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     599.978 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1527.938 ms      0.000 ms      0.000 ms
+Gates Setup            273.075 ms      0.000 ms      0.000 ms
+Gates Online             0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1802.025 ms      0.000 ms      0.000 ms
+===========================================================================
+Communication with each other party:
+Sent: 1.019 MiB in 390 messages
+Received: 1.019 MiB in 390 messages
+===========================================================================
+
+GateExecutor: After gate setup
+num_of_boolean_gmw_and_gate: 50852
+num_of_boolean_gmw_mux_gate: 2161
+max_depth_of_boolean_gmw_and_gate_before: 1857
+max_depth_of_boolean_gmw_mux_gate_before: 72
+max_depth_of_boolean_gmw_and_mux_gate_before: 1899
+num_of_garbled_circuit_and_gate: 0
+num_of_bmr_and_gate: 0
+
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_noise_generation_optimized bit size 64 SIMD 1
+===========================================================================
+MOTION version: c2bb7699-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 2 --parties 0,127.0.0.1,23000 1,127.0.0.1,23001 2,127.0.0.1,23002
+by liangzhao@ubuntu22, PID 125887
+===========================================================================
+Run time statistics over 1 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             16.543 ms      0.000 ms      0.000 ms
+MT Setup                28.168 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     565.969 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1446.551 ms      0.000 ms      0.000 ms
+Gates Setup            204.256 ms      0.000 ms      0.000 ms
+Gates Online             0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1668.913 ms      0.000 ms      0.000 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.848 MiB in 390 messages
+Received: 0.848 MiB in 390 messages
+===========================================================================
+
+GateExecutor: After gate setup
+num_of_boolean_gmw_and_gate: 36904
+num_of_boolean_gmw_mux_gate: 3301
+max_depth_of_boolean_gmw_and_gate_before: 1159
+max_depth_of_boolean_gmw_mux_gate_before: 67
+max_depth_of_boolean_gmw_and_mux_gate_before: 1220
+num_of_garbled_circuit_and_gate: 0
+num_of_bmr_and_gate: 0
+
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_perturbation_naive bit size 64 SIMD 1
+===========================================================================
+MOTION version: c2bb7699-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 2 --parties 0,127.0.0.1,23000 1,127.0.0.1,23001 2,127.0.0.1,23002
+by liangzhao@ubuntu22, PID 125887
+===========================================================================
+Run time statistics over 1 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             13.789 ms      0.000 ms      0.000 ms
+MT Setup                20.397 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     565.491 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1425.757 ms      0.000 ms      0.000 ms
+Gates Setup            158.040 ms      0.000 ms      0.000 ms
+Gates Online             0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1584.631 ms      0.000 ms      0.000 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.647 MiB in 390 messages
+Received: 0.647 MiB in 390 messages
+===========================================================================
+
+GateExecutor: After gate setup
+num_of_boolean_gmw_and_gate: 6258
+num_of_boolean_gmw_mux_gate: 516
+max_depth_of_boolean_gmw_and_gate_before: 136
+max_depth_of_boolean_gmw_mux_gate_before: 12
+max_depth_of_boolean_gmw_and_mux_gate_before: 143
+num_of_garbled_circuit_and_gate: 0
+num_of_bmr_and_gate: 0
+
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_perturbation_optimized bit size 64 SIMD 1
+===========================================================================
+MOTION version: c2bb7699-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 2 --parties 0,127.0.0.1,23000 1,127.0.0.1,23001 2,127.0.0.1,23002
+by liangzhao@ubuntu22, PID 125887
+===========================================================================
+Run time statistics over 1 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              2.430 ms      0.000 ms      0.000 ms
+MT Setup                94.614 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup      47.342 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1208.838 ms      0.000 ms      0.000 ms
+Gates Setup             24.626 ms      0.000 ms      0.000 ms
+Gates Online             0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1240.684 ms      0.000 ms      0.000 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.128 MiB in 390 messages
+Received: 0.128 MiB in 390 messages
+===========================================================================
+
+GateExecutor: After gate setup
+num_of_boolean_gmw_and_gate: 31947
+num_of_boolean_gmw_mux_gate: 2913
+max_depth_of_boolean_gmw_and_gate_before: 1060
+max_depth_of_boolean_gmw_mux_gate_before: 57
+max_depth_of_boolean_gmw_and_mux_gate_before: 1116
+num_of_garbled_circuit_and_gate: 0
+num_of_bmr_and_gate: 0
+
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_rounding_naive bit size 64 SIMD 1
+===========================================================================
+MOTION version: c2bb7699-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 2 --parties 0,127.0.0.1,23000 1,127.0.0.1,23001 2,127.0.0.1,23002
+by liangzhao@ubuntu22, PID 125887
+===========================================================================
+Run time statistics over 1 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             14.861 ms      0.000 ms      0.000 ms
+MT Setup                18.585 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     607.396 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1683.697 ms      0.000 ms      0.000 ms
+Gates Setup            140.904 ms      0.000 ms      0.000 ms
+Gates Online             0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1825.431 ms      0.000 ms      0.000 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.567 MiB in 390 messages
+Received: 0.567 MiB in 390 messages
+===========================================================================
+
+GateExecutor: After gate setup
+num_of_boolean_gmw_and_gate: 1301
+num_of_boolean_gmw_mux_gate: 128
+max_depth_of_boolean_gmw_and_gate_before: 37
+max_depth_of_boolean_gmw_mux_gate_before: 2
+max_depth_of_boolean_gmw_and_mux_gate_before: 39
+num_of_garbled_circuit_and_gate: 0
+num_of_bmr_and_gate: 0
+
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_rounding_optimized bit size 64 SIMD 1
+===========================================================================
+MOTION version: c2bb7699-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 2 --parties 0,127.0.0.1,23000 1,127.0.0.1,23001 2,127.0.0.1,23002
+by liangzhao@ubuntu22, PID 125887
+===========================================================================
+Run time statistics over 1 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.589 ms      0.000 ms      0.000 ms
+MT Setup                48.909 ms      0.000 ms      0.000 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup      91.793 ms      0.000 ms      0.000 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1052.390 ms      0.000 ms      0.000 ms
+Gates Setup              7.310 ms      0.000 ms      0.000 ms
+Gates Online             0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1062.189 ms      0.000 ms      0.000 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.047 MiB in 390 messages
+Received: 0.047 MiB in 390 messages
+===========================================================================
