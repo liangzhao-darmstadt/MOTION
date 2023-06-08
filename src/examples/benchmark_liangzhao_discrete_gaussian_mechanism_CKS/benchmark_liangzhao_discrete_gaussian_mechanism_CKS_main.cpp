@@ -212,24 +212,24 @@ std::vector<Combination> GenerateAllCombinations() {
     //                           batch_size, failure_probability_pow2_neg_40,sigma);
 
     // ================================================
-    // ! Garbled Circuit
-    batch_size = 20;
+    // // ! Garbled Circuit
+    // batch_size = 20;
 
-    // no overflow
-    combinations.emplace_back(
-        32, encrypto::motion::MpcProtocol::kGarbledCircuit,
-        T::kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_noise_generation_naive, batch_size,
-        failure_probability_pow2_neg_40, sigma);
+    // // no overflow
+    // combinations.emplace_back(
+    //     32, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    //     T::kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_noise_generation_naive, batch_size,
+    //     failure_probability_pow2_neg_40, sigma);
 
-    // no overflow
-    combinations.emplace_back(
-        32, encrypto::motion::MpcProtocol::kGarbledCircuit,
-        T::kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_noise_generation_optimized,
-        batch_size, failure_probability_pow2_neg_40, sigma);
+    // // no overflow
+    // combinations.emplace_back(
+    //     32, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    //     T::kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_noise_generation_optimized,
+    //     batch_size, failure_probability_pow2_neg_40, sigma);
 
-    combinations.emplace_back(32, encrypto::motion::MpcProtocol::kGarbledCircuit,
-                              T::kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_perturbation,
-                              batch_size, failure_probability_pow2_neg_40, sigma);
+    // combinations.emplace_back(32, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    //                           T::kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_perturbation,
+    //                           batch_size, failure_probability_pow2_neg_40, sigma);
 
     // ! overflow
     // combinations.emplace_back(
@@ -319,10 +319,10 @@ std::vector<Combination> GenerateAllCombinations() {
     batch_size = 10;  // ! overflow
 
     // no overflow (almost overflow)
-    // combinations.emplace_back(
-    //     32, encrypto::motion::MpcProtocol::kBooleanGmw,
-    //     T::kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_noise_generation_naive, batch_size,
-    //     failure_probability_pow2_neg_40,sigma);
+    combinations.emplace_back(
+        32, encrypto::motion::MpcProtocol::kBooleanGmw,
+        T::kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_noise_generation_naive, batch_size,
+        failure_probability_pow2_neg_40,sigma);
 
     // ! overflow
     // retest with sigma=0.456, if overflow happens?
