@@ -532,10 +532,11 @@ std::vector<Combination> GenerateAllCombinations() {
     // ! BooleanGMW
     batch_size = 5;
 
-    combinations.emplace_back(
-        32, encrypto::motion::MpcProtocol::kBooleanGmw,
-        T::kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_noise_generation_naive, batch_size,
-        failure_probability_pow2_neg_40, sigma);
+// // ! overflow (2023.06.07)
+//     combinations.emplace_back(
+//         32, encrypto::motion::MpcProtocol::kBooleanGmw,
+//         T::kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_noise_generation_naive, batch_size,
+//         failure_probability_pow2_neg_40, sigma);
 
     combinations.emplace_back(
         32, encrypto::motion::MpcProtocol::kBooleanGmw,
