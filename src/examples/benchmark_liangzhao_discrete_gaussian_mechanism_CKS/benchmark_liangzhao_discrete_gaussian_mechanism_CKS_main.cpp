@@ -102,9 +102,9 @@ std::vector<Combination> GenerateAllCombinations() {
   // only for debugging
   // double sigma = 1.5;  // ! overflow
 
-  // double sigma = 1.3773;
+  double sigma = 1.3773;
 
-  double sigma = 1.7773;
+  // double sigma = 1.7773; // ! overflow for 3PC DGauss simd 5
 
   if (benchmark_gc && num_of_parties == 2 && sigma < 1) {
     // ================================================
