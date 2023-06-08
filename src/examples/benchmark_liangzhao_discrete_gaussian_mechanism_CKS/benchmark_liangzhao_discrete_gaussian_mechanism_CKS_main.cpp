@@ -89,12 +89,13 @@ std::vector<Combination> GenerateAllCombinations() {
   double failure_probability_pow2_neg_40 = std::exp2l(-40.0);
 
   std::size_t batch_size = 1;
-  std::size_t num_of_parties = 2;
+  // std::size_t num_of_parties = 2;
+  // bool benchmark_gc = true;
+  // bool benchmark_boolean_gmw = false;
 
-  bool benchmark_gc = true;
-  bool benchmark_boolean_gmw = false;
-  // bool benchmark_gc = false;
-  // bool benchmark_boolean_gmw = true;
+  std::size_t num_of_parties = 3;
+  bool benchmark_gc = false;
+  bool benchmark_boolean_gmw = true;
 
   // double sigma = 0.5;
 
@@ -173,7 +174,7 @@ std::vector<Combination> GenerateAllCombinations() {
 
     combinations.emplace_back(64, encrypto::motion::MpcProtocol::kGarbledCircuit,
                               T::kDiscreteGaussianMechanismCKS_FL64DiscreteGaussian_perturbation,
-                              batch_size, failure_probability_pow2_neg_40,sigma);
+                              batch_size, failure_probability_pow2_neg_40, sigma);
 
     // ================================================
     // ! Garbled Circuit
@@ -489,7 +490,7 @@ std::vector<Combination> GenerateAllCombinations() {
 
     combinations.emplace_back(64, encrypto::motion::MpcProtocol::kGarbledCircuit,
                               T::kDiscreteGaussianMechanismCKS_FL64DiscreteGaussian_perturbation,
-                              batch_size, failure_probability_pow2_neg_40,sigma);
+                              batch_size, failure_probability_pow2_neg_40, sigma);
 
     // ================================================
   }
