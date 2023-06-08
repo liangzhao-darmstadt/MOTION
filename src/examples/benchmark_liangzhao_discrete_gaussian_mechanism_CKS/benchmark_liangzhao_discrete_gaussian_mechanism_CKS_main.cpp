@@ -97,7 +97,7 @@ std::vector<Combination> GenerateAllCombinations() {
   bool benchmark_gc = false;
   bool benchmark_boolean_gmw = true;
 
-  double sigma = 0.5;
+  double sigma = 0.456;
 
   // only for debugging
   // double sigma = 1.5;  // ! overflow
@@ -459,7 +459,7 @@ std::vector<Combination> GenerateAllCombinations() {
 
     // ================================================
     // ! Garbled Circuit
-    batch_size = 5;
+    batch_size = 3;
 
     // ! overflow
     // combinations.emplace_back(
@@ -493,6 +493,43 @@ std::vector<Combination> GenerateAllCombinations() {
                               batch_size, failure_probability_pow2_neg_40, sigma);
 
     // ================================================
+
+    // // ================================================
+    // // ! Garbled Circuit
+    // batch_size = 5;
+
+    // // ! overflow
+    // // combinations.emplace_back(
+    // //     32, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    // //     T::kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_noise_generation_naive, batch_size,
+    // //     failure_probability_pow2_neg_40, sigma);
+
+    // // combinations.emplace_back(
+    // //     32, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    // //     T::kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_noise_generation_optimized,
+    // //     batch_size, failure_probability_pow2_neg_40, sigma);
+
+    // combinations.emplace_back(32, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    //                           T::kDiscreteGaussianMechanismCKS_FL32DiscreteGaussian_perturbation,
+    //                           batch_size, failure_probability_pow2_neg_40, sigma);
+
+    // // ! overflow
+    // // combinations.emplace_back(
+    // //     64, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    // //     T::kDiscreteGaussianMechanismCKS_FL64DiscreteGaussian_noise_generation_naive, batch_size,
+    // //     failure_probability_pow2_neg_40,sigma);
+
+    // // ! overflow
+    // // combinations.emplace_back(
+    // //     64, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    // //     T::kDiscreteGaussianMechanismCKS_FL64DiscreteGaussian_noise_generation_optimized,
+    // //     batch_size, failure_probability_pow2_neg_40,sigma);
+
+    // combinations.emplace_back(64, encrypto::motion::MpcProtocol::kGarbledCircuit,
+    //                           T::kDiscreteGaussianMechanismCKS_FL64DiscreteGaussian_perturbation,
+    //                           batch_size, failure_probability_pow2_neg_40, sigma);
+
+    // // ================================================
   }
 
   if (benchmark_boolean_gmw && num_of_parties == 3 && sigma >= 1) {
