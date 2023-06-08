@@ -97,12 +97,12 @@ std::vector<Combination> GenerateAllCombinations() {
   bool benchmark_gc = false;
   bool benchmark_boolean_gmw = true;
 
-  // double sigma = 0.5;
+  double sigma = 0.5;
 
   // only for debugging
   // double sigma = 1.5;  // ! overflow
 
-  double sigma = 1.3773;
+  // double sigma = 1.3773;
 
   // double sigma = 1.7773; // ! overflow for 3PC DGauss simd 5
 
