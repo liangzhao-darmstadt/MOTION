@@ -1,0 +1,2907 @@
+lzhao@simx3 ~/MOTION_liangzhao_WAN_test/MOTION/build/bin $ ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+My id 2
+Other parties:  0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL32Laplace_noise_generation_naive bit size 32 SIMD 1
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup            119.056 ms    109.929 ms     17.884 ms
+MT Setup               307.630 ms    257.555 ms    109.299 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     872.481 ms    915.963 ms     91.519 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1385.316 ms   1367.201 ms     58.067 ms
+Gates Setup             47.597 ms     41.906 ms     14.794 ms
+Gates Online        320198.005 ms 320946.772 ms  24047.950 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  321636.184 ms 322462.136 ms  24053.582 ms
+===========================================================================
+Communication with each other party:
+Sent: 56.830 MiB in 121414 messages
+Received: 56.830 MiB in 121414 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL32Laplace_noise_generation_optimized bit size 32 SIMD 1
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             70.346 ms     55.802 ms     19.156 ms
+MT Setup               171.230 ms    167.853 ms     15.962 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     516.798 ms    496.981 ms     61.053 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    834.066 ms    792.921 ms     71.747 ms
+Gates Setup             67.629 ms     65.584 ms      8.739 ms
+Gates Online          5966.747 ms   5218.709 ms   1108.176 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    6873.083 ms   6094.682 ms   1058.001 ms
+===========================================================================
+Communication with each other party:
+Sent: 32.810 MiB in 120788 messages
+Received: 32.810 MiB in 120788 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL32Laplace_perturbation_naive bit size 32 SIMD 1
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              1.015 ms      0.949 ms      0.131 ms
+MT Setup                 7.380 ms      5.045 ms      5.166 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup      27.828 ms     24.793 ms      9.896 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    140.991 ms    141.603 ms      6.608 ms
+Gates Setup             32.067 ms     28.678 ms      7.406 ms
+Gates Online          3026.200 ms   3007.528 ms    104.917 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    3205.151 ms   3170.746 ms    117.189 ms
+===========================================================================
+Communication with each other party:
+Sent: 4.525 MiB in 78836 messages
+Received: 4.525 MiB in 78836 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL32Laplace_perturbation_optimized bit size 32 SIMD 1
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.206 ms      0.227 ms      0.038 ms
+MT Setup                21.927 ms     15.456 ms     19.099 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       9.446 ms      7.696 ms      5.006 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    105.113 ms     92.718 ms     29.033 ms
+Gates Setup              4.970 ms      5.233 ms      0.612 ms
+Gates Online           722.164 ms    668.193 ms    139.335 ms
+---------------------------------------------------------------------------
+Circuit Evaluation     837.784 ms    756.640 ms    154.712 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.677 MiB in 11722 messages
+Received: 0.677 MiB in 11722 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL64Laplace_noise_generation_naive bit size 64 SIMD 1
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup            250.418 ms    250.683 ms      0.655 ms
+MT Setup               619.886 ms    564.631 ms    114.077 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    2043.176 ms   2049.834 ms     61.431 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   3032.310 ms   3010.995 ms     93.984 ms
+Gates Setup             87.930 ms     76.372 ms     33.121 ms
+Gates Online        312667.381 ms 315154.526 ms  10589.320 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  315792.921 ms 318304.224 ms  10527.502 ms
+===========================================================================
+Communication with each other party:
+Sent: 127.703 MiB in 209882 messages
+Received: 127.703 MiB in 209882 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 1
+num_of_simd_total_: 3
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL64Laplace_noise_generation_optimized bit size 64 SIMD 1
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup            163.082 ms    162.902 ms      0.468 ms
+MT Setup               498.862 ms    475.940 ms    105.416 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    1311.038 ms   1316.422 ms    151.445 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   2126.469 ms   2126.489 ms     62.304 ms
+Gates Setup            134.366 ms    107.818 ms     54.133 ms
+Gates Online          8480.531 ms   8608.397 ms    854.551 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   10746.218 ms  10813.318 ms    939.286 ms
+===========================================================================
+Communication with each other party:
+Sent: 90.568 MiB in 190668 messages
+Received: 90.568 MiB in 190668 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL64Laplace_perturbation_naive bit size 64 SIMD 1
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              1.103 ms      1.168 ms      0.262 ms
+MT Setup                 8.382 ms      4.696 ms      6.739 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup      29.182 ms     32.999 ms      8.216 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    124.611 ms    107.157 ms     23.160 ms
+Gates Setup             54.173 ms     28.497 ms     54.153 ms
+Gates Online          2988.818 ms   2925.207 ms    117.049 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    3175.537 ms   3092.717 ms    138.127 ms
+===========================================================================
+Communication with each other party:
+Sent: 4.525 MiB in 78836 messages
+Received: 4.525 MiB in 78836 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL64Laplace_perturbation_optimized bit size 64 SIMD 1
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.202 ms      0.205 ms      0.017 ms
+MT Setup                29.918 ms     43.623 ms     17.845 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup       7.353 ms      7.786 ms      4.213 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    115.835 ms    116.769 ms     27.996 ms
+Gates Setup              4.220 ms      4.144 ms      0.490 ms
+Gates Online           612.034 ms    616.242 ms     14.931 ms
+---------------------------------------------------------------------------
+Circuit Evaluation     743.698 ms    722.496 ms     46.243 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.677 MiB in 11722 messages
+Received: 0.677 MiB in 11722 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL32Laplace_noise_generation_naive bit size 32 SIMD 10
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup           1063.599 ms   1063.738 ms      5.283 ms
+MT Setup              2461.794 ms   2470.894 ms     15.993 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    8979.426 ms   8972.323 ms    148.063 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total  12580.173 ms  12567.442 ms    145.703 ms
+Gates Setup             55.408 ms     53.256 ms     12.687 ms
+Gates Online        328011.117 ms 341763.295 ms  41741.310 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  340651.955 ms 354416.987 ms  41816.747 ms
+===========================================================================
+Communication with each other party:
+Sent: 515.666 MiB in 121414 messages
+Received: 515.666 MiB in 121414 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL32Laplace_noise_generation_optimized bit size 32 SIMD 10
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup            550.574 ms    547.162 ms      5.648 ms
+MT Setup              1468.111 ms   1318.957 ms    297.150 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    4671.145 ms   4785.418 ms    317.854 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   6773.267 ms   6748.640 ms    141.571 ms
+Gates Setup             44.024 ms     42.381 ms      6.585 ms
+Gates Online          5015.997 ms   4670.599 ms   1044.637 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   11845.384 ms  11465.023 ms   1027.008 ms
+===========================================================================
+Communication with each other party:
+Sent: 274.871 MiB in 120788 messages
+Received: 274.871 MiB in 120788 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL32Laplace_perturbation_naive bit size 32 SIMD 10
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              8.358 ms      7.946 ms      1.019 ms
+MT Setup                50.685 ms     42.595 ms     11.811 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     133.484 ms    132.561 ms     11.393 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    289.904 ms    291.449 ms     10.631 ms
+Gates Setup             33.355 ms     26.998 ms      9.780 ms
+Gates Online          2980.560 ms   2914.212 ms    161.308 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    3334.770 ms   3259.421 ms    163.400 ms
+===========================================================================
+Communication with each other party:
+Sent: 9.989 MiB in 78836 messages
+Received: 9.989 MiB in 78836 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL32Laplace_perturbation_optimized bit size 32 SIMD 10
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              1.720 ms      1.685 ms      0.278 ms
+MT Setup                10.754 ms     11.662 ms      3.631 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup      32.720 ms     32.563 ms      3.971 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    146.143 ms    153.319 ms     16.757 ms
+Gates Setup              5.294 ms      5.322 ms      0.620 ms
+Gates Online           565.699 ms    585.252 ms     90.466 ms
+---------------------------------------------------------------------------
+Circuit Evaluation     723.856 ms    760.138 ms     89.115 ms
+===========================================================================
+Communication with each other party:
+Sent: 1.466 MiB in 11722 messages
+Received: 1.466 MiB in 11722 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL64Laplace_noise_generation_naive bit size 64 SIMD 10
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup           2470.126 ms   2468.928 ms     13.765 ms
+MT Setup              5560.555 ms   5548.348 ms     18.837 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup   21276.808 ms  21227.496 ms    277.679 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total  29499.744 ms  29381.117 ms    365.194 ms
+Gates Setup             74.294 ms     74.116 ms      4.205 ms
+Gates Online        324857.451 ms 312800.100 ms  35329.365 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  354451.053 ms 342308.575 ms  35656.689 ms
+===========================================================================
+Communication with each other party:
+Sent: 1186.415 MiB in 209882 messages
+Received: 1186.415 MiB in 209882 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 10
+num_of_simd_total_: 30
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL64Laplace_noise_generation_optimized bit size 64 SIMD 10
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup           1675.631 ms   1679.640 ms      8.285 ms
+MT Setup              3973.735 ms   3976.542 ms     13.220 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup   14182.878 ms  14101.703 ms    172.552 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total  20000.360 ms  19972.667 ms    105.833 ms
+Gates Setup            114.742 ms     66.164 ms    101.336 ms
+Gates Online          7915.567 ms   7573.529 ms    937.364 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   28035.776 ms  27616.702 ms   1024.607 ms
+===========================================================================
+Communication with each other party:
+Sent: 822.333 MiB in 190668 messages
+Received: 822.333 MiB in 190668 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL64Laplace_perturbation_naive bit size 64 SIMD 10
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              8.028 ms      7.744 ms      0.782 ms
+MT Setup                43.269 ms     40.949 ms     14.326 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     136.682 ms    128.499 ms     14.250 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    282.159 ms    292.453 ms     21.536 ms
+Gates Setup             23.935 ms     23.429 ms      2.911 ms
+Gates Online          3126.060 ms   3053.441 ms    150.154 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    3439.133 ms   3394.750 ms    140.394 ms
+===========================================================================
+Communication with each other party:
+Sent: 9.989 MiB in 78836 messages
+Received: 9.989 MiB in 78836 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL64Laplace_perturbation_optimized bit size 64 SIMD 10
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              1.637 ms      1.673 ms      0.131 ms
+MT Setup                15.126 ms     11.701 ms      8.797 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup      23.018 ms     22.335 ms      7.830 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    153.669 ms    150.823 ms     46.619 ms
+Gates Setup              4.643 ms      4.302 ms      0.792 ms
+Gates Online           781.270 ms    810.321 ms    137.264 ms
+---------------------------------------------------------------------------
+Circuit Evaluation     951.926 ms    987.816 ms    129.983 ms
+===========================================================================
+Communication with each other party:
+Sent: 1.466 MiB in 11722 messages
+Received: 1.466 MiB in 11722 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_naive
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL32Laplace_noise_generation_naive bit size 32 SIMD 30
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup           3170.425 ms   3159.756 ms     14.575 ms
+MT Setup              7676.074 ms   7347.135 ms    705.049 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup   27100.444 ms  27265.184 ms    844.040 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total  38126.824 ms  37982.522 ms    470.945 ms
+Gates Setup             72.465 ms     44.991 ms     56.206 ms
+Gates Online        312154.156 ms 331079.909 ms  31098.471 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  350359.896 ms 369060.807 ms  31286.694 ms
+===========================================================================
+Communication with each other party:
+Sent: 1535.093 MiB in 121414 messages
+Received: 1535.093 MiB in 121414 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL32LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL32DiscreteLaplaceNoiseGeneration_optimized
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL32Laplace_noise_generation_optimized bit size 32 SIMD 30
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup           1671.117 ms   1670.579 ms      8.621 ms
+MT Setup              3878.265 ms   3899.322 ms     31.985 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup   14057.007 ms  14030.416 ms    158.102 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total  19751.164 ms  19706.762 ms    121.152 ms
+Gates Setup             79.530 ms     46.300 ms     51.471 ms
+Gates Online          6011.507 ms   5394.302 ms   1151.226 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   25855.113 ms  25105.216 ms   1170.076 ms
+===========================================================================
+Communication with each other party:
+Sent: 813.224 MiB in 120788 messages
+Received: 813.224 MiB in 120788 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL32Laplace_perturbation_naive bit size 32 SIMD 30
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             25.166 ms     22.608 ms      5.338 ms
+MT Setup               159.737 ms    157.979 ms     27.860 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     293.463 ms    290.943 ms     16.049 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    568.847 ms    573.562 ms     26.679 ms
+Gates Setup             27.348 ms     26.243 ms      3.156 ms
+Gates Online          3113.364 ms   3162.422 ms    222.315 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    3748.329 ms   3757.232 ms    270.384 ms
+===========================================================================
+Communication with each other party:
+Sent: 22.130 MiB in 78836 messages
+Received: 22.130 MiB in 78836 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL32Laplace_perturbation_optimized bit size 32 SIMD 30
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              5.554 ms      5.419 ms      0.363 ms
+MT Setup                27.997 ms     20.460 ms     10.233 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     110.411 ms     65.809 ms     94.054 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    228.436 ms    184.336 ms     89.947 ms
+Gates Setup              5.162 ms      5.232 ms      0.853 ms
+Gates Online           841.185 ms    819.779 ms    115.806 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    1083.054 ms   1157.396 ms    138.478 ms
+===========================================================================
+Communication with each other party:
+Sent: 3.222 MiB in 11722 messages
+Received: 3.222 MiB in 11722 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_naive
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_naive
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL64Laplace_noise_generation_naive bit size 64 SIMD 30
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup           7406.301 ms   7413.102 ms     36.630 ms
+MT Setup             30294.336 ms  25491.460 ms  17000.736 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup   65438.287 ms  65442.617 ms    675.415 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total 103446.356 ms  98772.117 ms  17361.046 ms
+Gates Setup             70.381 ms     73.939 ms      5.533 ms
+Gates Online        355976.600 ms 352275.620 ms  15919.692 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  459503.922 ms 449196.976 ms  18651.852 ms
+===========================================================================
+Communication with each other party:
+Sent: 3538.656 MiB in 209882 messages
+Received: 3538.656 MiB in 209882 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+SecureIntegerScalingLaplaceMechanism::FL64LaplaceNoiseGeneration_optimized
+SecureDiscreteLaplaceMechanismCKS::ParameterSetup
+scale: 20490
+failure_probability_requirement_: 9.09495e-13
+numerator_: 51
+denominator_: 1048576
+log2_denominator_: 20
+discrete_laplace_best_iterations_1: 28
+discrete_laplace_best_iterations_2: 30
+discrete_laplace_best_iterations_3: 3
+minimum_total_iteration: 84
+minimum_total_MPC_time: 25656.9
+geometric_failure_probability_estimation: 6.91424e-13
+discrete_laplace_failure_probability_estimation: 1.4381e-14
+upscale_factor: 1
+num_of_simd_geo_: 3
+num_of_simd_dlap_: 30
+num_of_simd_total_: 90
+
+SecureDiscreteLaplaceMechanismCKS::FL64DiscreteLaplaceNoiseGeneration_optimized
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL64Laplace_noise_generation_optimized bit size 64 SIMD 30
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup           5051.518 ms   5057.444 ms     28.965 ms
+MT Setup             12536.897 ms  11975.088 ms    869.312 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup   47003.275 ms  44776.011 ms   3905.017 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total  64904.902 ms  63492.505 ms   3852.602 ms
+Gates Setup            357.067 ms     68.875 ms    580.441 ms
+Gates Online          9392.457 ms   9042.951 ms   1340.032 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   74677.810 ms  74920.081 ms   5207.659 ms
+===========================================================================
+Communication with each other party:
+Sent: 2448.769 MiB in 190668 messages
+Received: 2448.769 MiB in 190668 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL64Laplace_perturbation_naive bit size 64 SIMD 30
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             46.682 ms     32.847 ms     30.962 ms
+MT Setup               122.940 ms    119.651 ms     35.279 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     403.277 ms    407.099 ms     88.272 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    652.752 ms    644.244 ms     46.626 ms
+Gates Setup             62.402 ms     23.575 ms     74.624 ms
+Gates Online          4218.067 ms   3829.226 ms   1038.023 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    4952.460 ms   4464.029 ms   1094.347 ms
+===========================================================================
+Communication with each other party:
+Sent: 22.130 MiB in 78836 messages
+Received: 22.130 MiB in 78836 messages
+===========================================================================
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+failure_probability: 9.09495e-13
+SecureIntegerScalingLaplaceMechanism::ParameterSetup
+epsilon: 0.1
+sensitivity_l1_ / epsilon / pow2_k_: 0.000305176
+resolution_r_: 0.000488281
+lambda_: 4.88043e-05
+scale_: 20490
+
+===========================================================================
+Protocol BooleanGMW operation kIntegerScalingLaplaceMechanism_FL64Laplace_perturbation_optimized bit size 64 SIMD 30
+===========================================================================
+MOTION version: 9df97c41-dirty @ dev
+invocation: ./benchmark_liangzhao_integer_scaling_laplace_mechanism --my-id 2 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 5
+by lzhao@simx3, PID 155670
+===========================================================================
+Run time statistics over 5 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              7.699 ms      7.428 ms      2.335 ms
+MT Setup                31.997 ms     34.386 ms     11.764 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     132.136 ms     75.973 ms    128.686 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    270.781 ms    217.430 ms    123.578 ms
+Gates Setup              6.244 ms      5.345 ms      1.909 ms
+Gates Online           669.745 ms    631.107 ms    130.403 ms
+---------------------------------------------------------------------------
+Circuit Evaluation     960.967 ms    895.888 ms    163.329 ms
+===========================================================================
+Communication with each other party:
+Sent: 3.222 MiB in 11722 messages
+Received: 3.222 MiB in 11722 messages
+===========================================================================
