@@ -1,0 +1,560 @@
+lzhao@simx2 ~/MOTION_liangzhao_WAN_test/MOTION/build/bin $ ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_noise_generation_naive bit size 64 SIMD 1
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              5.531 ms      3.553 ms      1.528 ms
+MT Setup               166.238 ms    173.947 ms     49.548 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     646.488 ms    655.820 ms     26.476 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1311.589 ms   1323.963 ms     36.633 ms
+Gates Setup             53.028 ms     50.954 ms      2.757 ms
+Gates Online        232187.377 ms 232402.045 ms    503.226 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  233560.157 ms 233785.652 ms    474.771 ms
+===========================================================================
+Communication with each other party:
+Sent: 7.375 MiB in 128552 messages
+Received: 7.375 MiB in 128552 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_noise_generation_optimized bit size 64 SIMD 1
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              1.125 ms      0.974 ms      0.111 ms
+MT Setup               179.260 ms    226.518 ms     50.766 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     619.931 ms    609.912 ms     32.481 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1294.168 ms   1346.370 ms     59.153 ms
+Gates Setup             45.203 ms     48.887 ms      2.689 ms
+Gates Online        224353.822 ms 223706.308 ms    600.215 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  225700.625 ms 225108.363 ms    540.413 ms
+===========================================================================
+Communication with each other party:
+Sent: 6.106 MiB in 106416 messages
+Received: 6.106 MiB in 106416 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_perturbation_naive bit size 64 SIMD 1
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.964 ms      0.992 ms      0.040 ms
+MT Setup               140.210 ms     90.508 ms     35.602 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     594.610 ms    630.281 ms     38.021 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1220.689 ms   1167.279 ms     37.999 ms
+Gates Setup             42.116 ms     42.096 ms      0.182 ms
+Gates Online        132849.846 ms 134174.052 ms    994.739 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  134119.962 ms 135389.631 ms    957.368 ms
+===========================================================================
+Communication with each other party:
+Sent: 4.622 MiB in 80548 messages
+Received: 4.622 MiB in 80548 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_perturbation_optimized bit size 64 SIMD 1
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.258 ms      0.296 ms      0.041 ms
+MT Setup               119.591 ms    101.622 ms     25.764 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     309.990 ms    323.316 ms     14.472 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    888.556 ms    877.365 ms     30.912 ms
+Gates Setup              6.481 ms      5.118 ms      0.969 ms
+Gates Online         15383.106 ms  15096.955 ms    222.320 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   16286.437 ms  15986.240 ms    220.898 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.775 MiB in 13434 messages
+Received: 0.775 MiB in 13434 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_rounding_naive bit size 64 SIMD 1
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.841 ms      0.795 ms      0.157 ms
+MT Setup               174.808 ms    169.101 ms     23.834 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     555.925 ms    545.599 ms     37.232 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1242.202 ms   1219.052 ms     18.066 ms
+Gates Setup             32.395 ms     27.805 ms      4.639 ms
+Gates Online        123990.833 ms 123639.236 ms    381.126 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  125274.249 ms 124894.563 ms    387.708 ms
+===========================================================================
+Communication with each other party:
+Sent: 4.024 MiB in 70110 messages
+Received: 4.024 MiB in 70110 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_rounding_optimized bit size 64 SIMD 1
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.065 ms      0.064 ms      0.001 ms
+MT Setup               137.351 ms    116.910 ms     15.490 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     189.916 ms    191.161 ms      9.613 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total    794.926 ms    768.240 ms     19.137 ms
+Gates Setup              1.386 ms      1.236 ms      0.330 ms
+Gates Online          4632.099 ms   4644.039 ms    203.967 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    5440.143 ms   5425.584 ms    209.968 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.176 MiB in 2996 messages
+Received: 0.176 MiB in 2996 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_noise_generation_naive bit size 64 SIMD 10
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             30.102 ms     31.252 ms      1.203 ms
+MT Setup               734.784 ms    754.895 ms    221.453 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    2290.182 ms   2327.358 ms    159.631 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   3536.066 ms   3611.474 ms    117.865 ms
+Gates Setup             54.547 ms     52.997 ms      1.099 ms
+Gates Online        232429.248 ms 233381.233 ms    822.633 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  236030.201 ms 237053.956 ms    929.281 ms
+===========================================================================
+Communication with each other party:
+Sent: 16.309 MiB in 128552 messages
+Received: 16.309 MiB in 128552 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_noise_generation_optimized bit size 64 SIMD 10
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             19.050 ms     16.976 ms      1.728 ms
+MT Setup               127.634 ms     57.674 ms     98.475 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    2244.781 ms   2318.502 ms     52.800 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   2868.152 ms   2867.322 ms     53.568 ms
+Gates Setup             47.226 ms     52.814 ms      3.982 ms
+Gates Online        224048.789 ms 223393.040 ms    806.965 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  226970.163 ms 226318.483 ms    849.956 ms
+===========================================================================
+Communication with each other party:
+Sent: 13.495 MiB in 106416 messages
+Received: 13.495 MiB in 106416 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_perturbation_naive bit size 64 SIMD 10
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             10.972 ms      7.859 ms      2.602 ms
+MT Setup               621.538 ms   1236.123 ms    476.733 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    1841.378 ms   1800.092 ms    184.514 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   2933.191 ms   3563.923 ms    447.420 ms
+Gates Setup             33.497 ms     32.668 ms      5.464 ms
+Gates Online        133606.062 ms 134032.799 ms    338.484 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  136579.749 ms 137635.975 ms    755.371 ms
+===========================================================================
+Communication with each other party:
+Sent: 10.206 MiB in 80548 messages
+Received: 10.206 MiB in 80548 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_perturbation_optimized bit size 64 SIMD 10
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              2.476 ms      2.774 ms      0.393 ms
+MT Setup               257.178 ms    317.484 ms     42.715 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     629.537 ms    590.137 ms     28.100 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1376.359 ms   1421.591 ms     33.360 ms
+Gates Setup              6.764 ms      6.002 ms      0.716 ms
+Gates Online         15399.649 ms  15377.628 ms     35.813 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   16792.405 ms  16811.766 ms     39.843 ms
+===========================================================================
+Communication with each other party:
+Sent: 1.684 MiB in 13434 messages
+Received: 1.684 MiB in 13434 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_rounding_naive bit size 64 SIMD 10
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              7.699 ms      7.771 ms      0.138 ms
+MT Setup               598.248 ms   1143.973 ms    398.024 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    1529.790 ms   1530.612 ms     96.078 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   2616.857 ms   3143.979 ms    373.177 ms
+Gates Setup             29.710 ms     28.254 ms      1.697 ms
+Gates Online        122842.373 ms 122638.762 ms    759.730 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  125498.065 ms 125821.976 ms    799.399 ms
+===========================================================================
+Communication with each other party:
+Sent: 8.880 MiB in 70110 messages
+Received: 8.880 MiB in 70110 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_rounding_optimized bit size 64 SIMD 10
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              0.918 ms      0.586 ms      0.485 ms
+MT Setup               147.687 ms     99.476 ms     42.645 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     382.716 ms    408.250 ms     45.946 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1012.800 ms    972.292 ms     42.957 ms
+Gates Setup              1.559 ms      1.386 ms      0.129 ms
+Gates Online          4634.317 ms   4510.399 ms     88.143 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    5666.237 ms   5491.140 ms    126.127 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.359 MiB in 2996 messages
+Received: 0.359 MiB in 2996 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_noise_generation_naive bit size 64 SIMD 30
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             66.414 ms     64.004 ms      2.527 ms
+MT Setup               799.494 ms    161.890 ms    726.411 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    6399.073 ms   6461.892 ms    403.936 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   7691.193 ms   7145.174 ms    420.525 ms
+Gates Setup             43.963 ms     42.473 ms      3.240 ms
+Gates Online        231635.879 ms 229801.854 ms   1430.912 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  239376.353 ms 236994.218 ms   1854.041 ms
+===========================================================================
+Communication with each other party:
+Sent: 36.160 MiB in 128552 messages
+Received: 36.160 MiB in 128552 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_noise_generation_optimized bit size 64 SIMD 30
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             69.505 ms     90.888 ms     15.441 ms
+MT Setup               511.711 ms    827.419 ms    293.712 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    5515.924 ms   5580.342 ms    236.165 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   6481.128 ms   6856.355 ms    268.245 ms
+Gates Setup             42.342 ms     45.022 ms      5.686 ms
+Gates Online        223173.939 ms 221625.365 ms   1149.402 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  229703.479 ms 228532.149 ms    917.475 ms
+===========================================================================
+Communication with each other party:
+Sent: 29.916 MiB in 106416 messages
+Received: 29.916 MiB in 106416 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_perturbation_naive bit size 64 SIMD 30
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             47.689 ms     44.383 ms      9.989 ms
+MT Setup              1131.563 ms    960.749 ms    164.330 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    3835.422 ms   3654.033 ms    148.334 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   5447.525 ms   5110.527 ms    245.948 ms
+Gates Setup             32.467 ms     36.319 ms      3.161 ms
+Gates Online        133699.754 ms 133073.981 ms    442.522 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  139186.714 ms 138227.128 ms    680.921 ms
+===========================================================================
+Communication with each other party:
+Sent: 22.613 MiB in 80548 messages
+Received: 22.613 MiB in 80548 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_perturbation_optimized bit size 64 SIMD 30
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              6.612 ms      8.369 ms      1.674 ms
+MT Setup                86.904 ms    156.099 ms     54.420 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    1162.174 ms   1111.385 ms     44.696 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1724.743 ms   1790.807 ms     47.573 ms
+Gates Setup              6.240 ms      6.736 ms      0.602 ms
+Gates Online         15387.196 ms  15266.568 ms    146.396 ms
+---------------------------------------------------------------------------
+Circuit Evaluation   17125.552 ms  17070.234 ms    133.308 ms
+===========================================================================
+Communication with each other party:
+Sent: 3.705 MiB in 13434 messages
+Received: 3.705 MiB in 13434 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_rounding_naive bit size 64 SIMD 30
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup             34.104 ms     37.813 ms      2.643 ms
+MT Setup               970.214 ms   1609.579 ms    554.229 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup    3693.911 ms   3368.309 ms    313.250 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   5145.180 ms   5465.175 ms    248.110 ms
+Gates Setup             27.342 ms     28.561 ms      1.702 ms
+Gates Online        123769.117 ms 124357.437 ms    442.918 ms
+---------------------------------------------------------------------------
+Circuit Evaluation  128949.009 ms 129857.662 ms    691.752 ms
+===========================================================================
+Communication with each other party:
+Sent: 19.671 MiB in 70110 messages
+Received: 19.671 MiB in 70110 messages
+===========================================================================
+===========================================================================
+Protocol BooleanGMW operation kSnappingMechanism_rounding_optimized bit size 64 SIMD 30
+===========================================================================
+MOTION version: 4b803832-dirty @ dev
+invocation: ./benchmark_liangzhao_snapping_mechanism --my-id 1 --parties 0,130.83.125.165,23000 1,130.83.125.166,23000 2,130.83.125.167,23000 --repetitions 3
+by lzhao@simx2, PID 236588
+===========================================================================
+Run time statistics over 3 iterations
+---------------------------------------------------------------------------
+                          mean        median        stddev
+---------------------------------------------------------------------------
+MT Presetup              1.625 ms      1.631 ms      0.029 ms
+MT Setup               164.676 ms    181.880 ms     42.020 ms
+SP Presetup              0.000 ms      0.000 ms      0.000 ms
+SP Setup                 0.000 ms      0.000 ms      0.000 ms
+SB Presetup              0.000 ms      0.000 ms      0.000 ms
+SB Setup                 0.000 ms      0.000 ms      0.000 ms
+Base OTs                 0.000 ms      0.000 ms      0.000 ms
+OT Extension Setup     532.558 ms    512.226 ms     31.146 ms
+KK13 OT Extension Setup      0.000 ms      0.000 ms      0.000 ms
+---------------------------------------------------------------------------
+Preprocessing Total   1194.366 ms   1183.030 ms     26.113 ms
+Gates Setup              1.844 ms      1.629 ms      0.477 ms
+Gates Online          4695.485 ms   4805.780 ms    169.710 ms
+---------------------------------------------------------------------------
+Circuit Evaluation    5904.009 ms   5999.480 ms    139.874 ms
+===========================================================================
+Communication with each other party:
+Sent: 0.763 MiB in 2996 messages
+Received: 0.763 MiB in 2996 messages
+===========================================================================
+lzhao@simx2 ~/MOTION_liangzhao_WAN_test/MOTION/build/bin $ 
